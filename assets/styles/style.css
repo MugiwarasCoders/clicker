@@ -3,14 +3,32 @@ body{
     background-size: cover;
 }
 
-.compteur{
+main{
+    display: flex;
+}
 
+/*-------------------BURTON----------------------*/
+
+.compteur{
+    min-height: 50px;
+    width: 7vw;
+    background-color: blue;
+    position: absolute;
+    left: 2vw;
 }
 
 .chantier{
-
+    min-height: 20vh;
+    width: 70vw;
+    background-color: red;
+    position: absolute;
+    right: 20vw;
 }
 
-.menu_ameliorations{
-
+.boutique{
+    min-height: 80vh;
+    width: 15vw;
+    background-color: aqua;
+    position: absolute;
+    right: 2vw;
 }
