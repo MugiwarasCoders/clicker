@@ -1,0 +1,30 @@
+body{
+    background-image: url('../img/background.png');
+    background-size: cover;
+
+
+}
+
+
+/*----------------------------younes-----------------------------*/
+
+.compteur{
+
+}
+
+.chantier{
+
+}
+
+.image_chantier{
+  width: 30%;
+  height: 80%;
+  border-bottom: 15px ridge #C44526;
+  border-left: 15px ridge #C44526;
+  border-right: 15px ridge #C44526;
+  border-radius: 25px;
+}
+
+.boutique{
+
+}
