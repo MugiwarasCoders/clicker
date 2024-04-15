@@ -4,76 +4,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/scripts/script.js" defer></script>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      defer
+    ></script>
+
     <title>Document</title>
   </head>
   <body>
     <main>
-      <img src="assets/img/mineur.png" alt="image mineur" />
-      <img src="assets/img/vaisseau.png" alt="image vaisseau" />
+      <img
+        src="assets/img/mineur.png"
+        alt="image mineur"
+        class="image_mineur"
+      />
+      <img
+        src="assets/img/vaisseau.png"
+        alt="image vaisseau"
+        class="image_vaisseau"
+      />
       <div class="compteur">
-        <div>
-          <img src="assets/img/pixelite.png" alt="image pixelite" />
-        </div>
         <div></div>
       </div>
       <div class="chantier"></div>
-      <div class="boutique">
+      <section class="boutique">
+        <h1 class="titre_boutique">Boutique</h1>
+        <div class="background"></div>
         <div class="ameliorations">
-          <img
-            src="assets/img/pioche_en_bois.webp"
-            alt="image pioche en bois"
-            class="image_pioche_en_bois"
-          />
-          <img
-            src="assets/img/pioche_en_pierre.webp"
-            alt="image pioche en pierre"
-            class="image_pioche_en_pierre"
-          />
-          <img
-            src="assets/img/pioche_en_fer.webp"
-            alt="image pioche en fer"
-            class="image_pioche_en_fer"
-          />
-
-          <img
-            src="assets/img/pioche_en_or.webp"
-            alt="image pioche en or"
-            class="image_pioche_en_or"
-          />
-          <img
-            src="assets/img/pioche_en_diamant.webp"
-            alt="image pioche en diamant"
-            class="image_pioche_en_diamant"
-          />
-          <img
-            src="assets/img/pioche_en_pixelite.webp"
-            alt="image pioche en pixelite"
-            class="image_pioche_en_pixelite"
-          />
+          <div class="carousel">
+            <a class="carousel-item" href="#one!">
+              <img
+                src="assets/img/pioche_en_bois.webp"
+                alt="image pioche en bois"
+                class="image_pioche_en_bois"
+            /></a>
+            <a class="carousel-item" href="#two!">
+              <img
+                src="assets/img/pioche_en_pierre.webp"
+                alt="image pioche en pierre"
+                class="image_pioche_en_pierre"
+            /></a>
+            <a class="carousel-item" href="#three!"
+              ><img
+                src="assets/img/pioche_en_fer.webp"
+                alt="image pioche en fer"
+                class="image_pioche_en_fer"
+            /></a>
+            <a class="carousel-item" href="#four!"
+              ><img
+                src="assets/img/pioche_en_or.webp"
+                alt="image pioche en or"
+                class="image_pioche_en_or"
+            /></a>
+            <a class="carousel-item" href="#five!">
+              <img
+                src="assets/img/pioche_en_diamant.webp"
+                alt="image pioche en diamant"
+                class="image_pioche_en_diamant"
+            /></a>
+            <a class="carousel-item" href="#six!">
+              <img
+                src="assets/img/pioche_en_pixelite.webp"
+                alt="image pioche en pixelite"
+                class="image_pioche_en_pixelite"
+            /></a>
+          </div>
         </div>
-
         <div class="mineurs">
           <div>
-            <p>Amélioration: Digibot</p>
+            <p>Digibot</p>
             <img src="assets/img/DigiBot.png" alt="image DigiBot" />
           </div>
           <div>
-            <p>Amélioration: GigaBot</p>
+            <p>GigaBot</p>
             <img src="assets/img/GigaBot.png" alt="image GigaBot" />
           </div>
           <div>
-            <p>Amélioration: Pixeliteuse</p>
+            <p>Pixeliteuse</p>
             <img src="assets/img/Pixeliteuse.png" alt="image Pixeliteuse" />
           </div>
           <div>
-            <p>Amélioration: Extracteur de Pixelite</p>
+            <p>Extracteur de Pixelite</p>
             <img
               src="assets/img/extracteur_pixelite.png"
               alt="image extracteur de pixelite"
             />
           </div>
         </div>
-      </div>
+      </section>
+      <div class="mine"><img src="assets/img/mine.png" alt="image mine" /></div>
     </main>
   </body>
 </html>

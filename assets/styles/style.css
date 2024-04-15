@@ -2,22 +2,122 @@ body{
     background-image: url('../img/background.png');
     background-size: cover;
 }
+body{
+  background-image: url('../img/background.png');
+  background-size: cover;
+}
 
+main{
+  display: flex;
+}
 
-/*----------------------------younes-----------------------------*/
+.background{
+
+}
+
+.compteur{
+  min-height: 50px;
+  width: 7vw;
+  background-color: blue;
+  position: absolute;
+  left: 2vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .chantier{
-  background-image: url(../img/background_chantier.jpg);
+  min-height: 20vh;
+  width: 70vw;
+  background-image: url('../img/background_chantier.jpg');
+  position: absolute;
+  right: 20vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .boutique{
-  background-image: url(../img/boutique.jpg);
+  min-height: 80vh;
+  width: 15vw;
+  background-image: url('../img/boutique.jpg');
+  position: absolute;
+  right: 2vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
 }
 
+.mine{
+  z-index: 1;
+  position: absolute;
+  bottom: 3vh;
+  left: 34vw;
+}
 
-.image_chantier{
+.mine img{
+  width: 400px;
+}
+
+/*----------------------------younes-----------------------------*/
+
+.image_mineur{
+  position: absolute;
+  right: 59%;
+  bottom: 7%;
+  width: 5%;
+  z-index: 2;
   
 }
 
-.boutique{
+.image_vaisseau{
+  position: absolute;
+  right: 25%;
+  bottom: 18%;
+  width: 15%;
+  z-index: 3;
+}
 
+h2{
+  font-size: 5%;
+}
+
+.carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 12vh !important;
+}
+
+.carousel-item{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; 
+}
+
+.carousel img{
+  width: 50% !important;
+ 
+}
+
+.ameliorations{
+  display: flex;
+  justify-content: center !important;
+  width: 100% ;
+}
+
+.carousel_entier{
+  width: 50%;
+  height: 50%;
+}
+
+.image_pixelite{
+  width: 100%;
+}
+
+.boutique img{
+  width: 30%;
+}
+
+.titre_boutique{
+  color: white;
+  font-size: 150%;
+  text-align: center;
 }
