@@ -8,5 +8,7 @@ let DigiBot_Price = 20;
 let GigaBot_Price = 30; 
 
 $(document).ready(function(){
+    $('.carousel').carousel();//Animation carousel
     $('.mine').click(clickAddPixelite)
 })
+
