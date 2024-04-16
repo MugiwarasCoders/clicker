@@ -12,3 +12,12 @@ $(document).ready(function(){
     $('.mine').click(clickAddPixelite)
 })
 
+
+
+//------------------Animations-----------------------
+$('.mine').click(function(){
+    if (counter === 0){
+        $('.image_mineur').attr('src', 'assets/img/animation_mineur.gif')
+    } 
+})
+
