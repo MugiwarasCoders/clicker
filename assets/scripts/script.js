@@ -11,5 +11,4 @@ let GigaBot_Price = 30;
 $(document).ready(function(){
   $('.carousel').carousel(); // carousel
   $('.mine').click(clickAddPixelite)
-
 });
