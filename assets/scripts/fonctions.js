@@ -1,8 +1,18 @@
 function clickAddPixelite(){
+    buy_DigiBot(counter, clickerGain)
     counter += clickerGain
-    $('.compteur p').html(counter+'<img src="assets/img/pixelite.png" style="width: 30px">')
+    $('.count').html(counter)
     unlock_DigiBot(counter)
     unlock_GigaBot(counter)
+    localStorage.setItem('counter', counter)
+    localStorage.setItem('clickerGain', clickerGain)
+    localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
+}
+
+function save(){
+    pixelitePerSecond = localStorage.getItem('pixelitePerSecond')
+    clickerGain = localStorage.getItem('clickerGain')
+    counter = localStorage.getItem('counter')
 }
 
 
@@ -19,6 +29,13 @@ function unlock_GigaBot(counter){
     if (counter === GigaBot_Price){
         console.log('Vous pouvez acheter un GigaBot')
         GigaBot_Price = 200;
+    }
+}
+
+//----------------Buy Miners----------------
+function buy_DigiBot(counter){
+    if (counter >= 20){
+        clickerGain = 2
     }
 }
 
