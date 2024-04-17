@@ -22,4 +22,26 @@ function unlock_GigaBot(counter){
     }
 }
 
+function clickUpgradePickaxe() {
+    var pioches = document.getElementsByClassName("image_pioche");
+    var titres = document.getElementsByClassName("titre_pioche");
+
+    for (var i = 0; i < pioches.length; i++) {
+        if (pioches[i].src === "assets/img/pioche_non_debloquee.png") {
+            titres[i].textContent = "Verrouillé 🔒";
+        }
+    }
+}
+
+// function unlock_pioche_en_bois(counter) {
+//     if (counter === pioche_en_bois_Price) {
+//         console.log('Vous pouvez acheter une pioche en bois');
+//         // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
+//         pioche_en_bois_Price = 5;
+//         // document.getElementById("titre_pioche").textContent = "Déverrouillé 🔓"; 
+//     } else {;
+//         // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
+//         document.getElementById("image_pioche1").src = "assets/img/pioche_non_debloquee.png";
+//     }
+// }
 

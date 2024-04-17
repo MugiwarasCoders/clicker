@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('.carousel').carousel();//Animation carousel
     $('.mine').click(clickAddPixelite)
     $('#bouton_ameliorer').click(clickUpgradePickaxe)
+
 })
 
 
