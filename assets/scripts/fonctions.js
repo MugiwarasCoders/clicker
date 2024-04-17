@@ -133,6 +133,5 @@ function unlock_pioche_en_bois(counter) {
         // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
         document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
         document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
-
     }
 }
