@@ -1,13 +1,9 @@
-const notEnoughMoney = 'Vous n\'avez pas assez de pixelites pour cela!'
+const notEnoughMoney = 'Vous n\'avez pas suffisamment de pixelites pour cela!'
+const gameEnded = 'Vous avez fini le jeu'
 
 function clickAddPixelite(){
     counter += clickerGain
     $('.count').html(counter)
-    unlock_DigiBot(counter)
-    unlock_GigaBot(counter)
-    unlock_Pixeliteuse(counter)
-    unlock_Extracteur(counter)
-    unlock_pioche_en_bois(counter)
     localStorage.setItem('counter', counter)
     localStorage.setItem('clickerGain', clickerGain)
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
@@ -30,9 +26,16 @@ function pricesInit(){
     $('#extracteurPrice').html(Extracteur_Price+'<img class="unit" src="assets/img/pixelite.png">')
 }
 
+//La fonction rafraichit le compteur tous les 10èmes de seconde et permet de dévérouiller le objets 
+//de la boutique quand le compteur atteint un certain seuil
 function counterRefresh(){
     $('.count').html(counter)
     localStorage.setItem('counter', counter)
+    unlock_DigiBot(counter)
+    unlock_GigaBot(counter)
+    unlock_Pixeliteuse(counter)
+    unlock_Extracteur(counter)
+    unlock_pioche_en_bois(counter)
 }
 
 function ppsRefresh(){
@@ -43,13 +46,29 @@ function ppsRefresh(){
     unlock_pioche_en_bois(counter)
 }
 
+//----------------Unlock Pickaxes----------------
+
+function unlock_pioche_en_bois(counter) {
+    if (counter >= pioche_en_bois_Price) {
+        // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
+        pioche_en_bois_Price = 5;
+    } else {
+        // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
+        document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
+        document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
+    }
+}
+
+function unlock_stonePickaxe(){
+    $('.image_mineur').attr('src', 'assets/img/mineur_pierre.gif')
+}
+
 //----------------Unlock Miners----------------
 
 function unlock_DigiBot(counter){
     if (counter >= DigiBot_Price){
         $('#digibotName').html('Digibot')
         $('#digibotImg').attr('src', 'assets/img/Digibot.png')
-        $('#digibotButton').prop('disabled', false)
     }
 }
 
@@ -57,7 +76,6 @@ function unlock_GigaBot(counter){
     if (counter >= GigaBot_Price){
         $('#gigabotName').html('Gigabot')
         $('#gigabotImg').attr('src', 'assets/img/Gigabot.png')
-        $('#gigabotButton').prop('disabled', false)
     }
 }
 
@@ -65,7 +83,6 @@ function unlock_Pixeliteuse(counter){
     if (counter >= Pixeliteuse_Price){
         $('#pixeliteuseName').html('Pixeliteuse')
         $('#pixeliteuseImg').attr('src', 'assets/img/Pixeliteuse.png')
-        $('#pixeliteuseButton').prop('disabled', false)
     }
 }
 
@@ -73,7 +90,6 @@ function unlock_Extracteur(counter){
     if (counter >= Extracteur_Price){
         $('#extracteurName').html('Extracteur')
         $('#extracteurImg').attr('src', 'assets/img/Extracteur.png')
-        $('#extracteurButton').prop('disabled', false)
     }
 }
 
@@ -96,8 +112,7 @@ function buy_DigiBot(){
         ppsRefresh()
     }
     else{
-        console.log(notEnoughMoney)
-        alert(notEnoughMoney)
+        notification(notEnoughMoney)
     }
 }
 
@@ -118,20 +133,68 @@ function buy_GigaBot(){
         ppsRefresh()
     }
     else{
-        console.log(notEnoughMoney)
-        alert(notEnoughMoney)
+        notification(notEnoughMoney)
     }
 }
 
-
-function unlock_pioche_en_bois(counter) {
-    if (counter === pioche_en_bois_Price) {
-        console.log('Vous pouvez acheter une pioche en bois');
-        // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
-        pioche_en_bois_Price = 5;
-    } else {;
-        // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
-        document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
-        document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
+function buy_Pixeliteuse(){
+    let number = parseInt($('#pixeliteuseNumber').text())
+    //Si le joueur a assez de pixelites
+    if (counter >= Pixeliteuse_Price){
+        //On ajoute 1 au nombre possédé
+        $('#pixeliteuseNumber').html(number+1)
+        //Le compteur s'actualise en déduisant le prix
+        counter = counter - Pixeliteuse_Price
+        counterRefresh()
+        //Le prix augmente et s'actualise
+        Pixeliteuse_Price = Pixeliteuse_Price * 4
+        pricesInit()
+        //On augmente les pixelites/seconde
+        pixelitePerSecond += 100
+        ppsRefresh()
     }
+    else{
+        notification(notEnoughMoney)
+    }
+}
+
+function buy_Extracteur(){
+    let number = parseInt($('#extracteurNumber').text())
+    //Si le joueur a assez de pixelites
+    if (counter >= Extracteur_Price){
+        //On ajoute 1 au nombre possédé
+        $('#extracteurNumber').html(number+1)
+        //Le compteur s'actualise en déduisant le prix
+        counter = counter - Extracteur_Price
+        counterRefresh()
+        //Le prix augmente et s'actualise
+        Extracteur_Price = Extracteur_Price * 6
+        pricesInit()
+        //On augmente les pixelites/seconde
+        pixelitePerSecond += 300
+        ppsRefresh()
+    }
+    else{
+        notification(notEnoughMoney)
+    }
+}
+
+//------------Animation Functions----------------------
+
+function popPixelite(event){
+    let Animates = ["animate__fadeOutTopLeft", "animate__fadeOutTopRight", "animate__fadeOutBottomLeft", "animate__fadeOutBottomRight"]
+    let randomAnimate = Animates[Math.floor(Math.random() * Animates.length)]
+    $('.mine').append('<img src="assets/img/pixelite.png" class="popPixelite animate__animated '+randomAnimate+' ">')
+    let posX = event.pageX - $(event.currentTarget).offset().left;
+    let posY = event.pageY - $(event.currentTarget).offset().top; 
+    $('.popPixelite').css({
+        left: posX,
+        top: posY
+    }).fadeIn()
+}
+
+//------------Interface----------------------
+function notification(texte){
+    $('.notification').text(texte).fadeIn();
+    setTimeout(function(){$('.notification').text(texte).fadeOut()}, 2000);
 }

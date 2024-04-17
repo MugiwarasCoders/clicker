@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,9 @@
 </head>
 <body>
     <main>
+        <p class="notification"></p>
         <div>
+            <img src="assets/img/mineurPixelite.png" alt="mineur de pixelite" class="mineurPixelite">
             <img src="assets/img/mineur.png" alt="image mineur" class="image_mineur">
             <img src="assets/img/vaisseau.png" alt="image vaisseau" class="image_vaisseau">
             <div class="compteur">
@@ -69,10 +72,10 @@
                     </div>
                     <section class="mineurs">
                         <h2 class="sous_titre_boutique">Mes Mineurs</h2>
-                        <div class="achat_image_chiffre" id="digibotButton" disabled>
+                        <div class="achat_image_chiffre" id="digibotButton">
                             <img src="assets/img/Digibot_mystère.png" alt="image DigiBot" class="image_achat" id="digibotImg">
                             <div class="prix_nom_achat">
-                                <div>
+                                <div class="infos_mineur">
                                     <h3 class="nom_achat" id="digibotName">?????</h3>
                                     <p class="prix_mineurs" id="digibotPrice"></p>
                                 </div>
@@ -82,7 +85,7 @@
                         <div class="achat_image_chiffre" id="gigabotButton" disabled>
                             <img src="assets/img/GigaBot_mystère.png" alt="image GigaBot" class="image_achat" id="gigabotImg">
                             <div class="prix_nom_achat">
-                                <div>
+                                <div class="infos_mineur">
                                     <h3 class="nom_achat" id="gigabotName">?????</h3>
                                     <p class="prix_mineurs" id="gigabotPrice"></p>
                                 </div>
@@ -92,7 +95,7 @@
                         <div class="achat_image_chiffre" id="pixeliteuseButton" disabled>
                             <img src="assets/img/Pixeliteuse_mystère.png" alt="image Pixeliteuse" class="image_achat" id="pixeliteuseImg">
                             <div class="prix_nom_achat">
-                                <div>
+                                <div class="infos_mineur">
                                     <h3 class="nom_achat" id="pixeliteuseName">?????</h3>
                                     <p class="prix_mineurs" id="pixeliteusePrice"></p>
                                 </div>
@@ -102,7 +105,7 @@
                         <div class="achat_image_chiffre" id="extracteurButton" disabled>
                             <img src="assets/img/extracteur_mystère.png" alt="image extracteur" class="image_achat" id="extracteurImg">
                             <div class="prix_nom_achat">
-                                <div>
+                                <div class="infos_mineur">
                                     <h3 class="nom_achat" id="extracteurName">?????</h3>
                                     <p class="prix_mineurs" id="extracteurPrice"></p>
                                 </div>
