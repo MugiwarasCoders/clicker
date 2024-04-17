@@ -1,3 +1,5 @@
+const notEnoughMoney = 'Vous n\'avez pas assez de pixelites pour cela!'
+
 function clickAddPixelite(){
     counter += clickerGain
     $('.count').html(counter)
@@ -30,6 +32,13 @@ function pricesInit(){
 function counterRefresh(){
     $('.count').html(counter)
     localStorage.setItem('counter', counter)
+}
+
+function ppsRefresh(){
+    $('.pps').html(pixelitePerSecond)
+    localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
+    counter += pixelitePerSecond
+    counterRefresh()
 }
 
 
@@ -71,12 +80,45 @@ function unlock_Extracteur(counter){
 
 function buy_DigiBot(){
     let number = parseInt($('#digibotNumber').text())
-    if (number == 0){
+    //Si le joueur a assez de pixelites
+    if (counter >= DigiBot_Price){
+        //On ajoute 1 au nombre possédé
         $('#digibotNumber').html(number+1)
+        //Le compteur s'actualise en déduisant le prix
         counter = counter - DigiBot_Price
         counterRefresh()
-        DigiBot_Price = 30
+        //Le prix augmente et s'actualise
+        DigiBot_Price = DigiBot_Price * 2
         pricesInit()
+        //On augmente les pixelites/seconde
+        pixelitePerSecond += 1
+        ppsRefresh()
+    }
+    else{
+        console.log(notEnoughMoney)
+        alert(notEnoughMoney)
+    }
+}
+
+function buy_GigaBot(){
+    let number = parseInt($('#gigabotNumber').text())
+    //Si le joueur a assez de pixelites
+    if (counter >= GigaBot_Price){
+        //On ajoute 1 au nombre possédé
+        $('#gigabotNumber').html(number+1)
+        //Le compteur s'actualise en déduisant le prix
+        counter = counter - GigaBot_Price
+        counterRefresh()
+        //Le prix augmente et s'actualise
+        GigaBot_Price = GigaBot_Price * 3
+        pricesInit()
+        //On augmente les pixelites/seconde
+        pixelitePerSecond += 10
+        ppsRefresh()
+    }
+    else{
+        console.log(notEnoughMoney)
+        alert(notEnoughMoney)
     }
 }
 

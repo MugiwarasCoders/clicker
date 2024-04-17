@@ -5,9 +5,9 @@ let counter = 0;
 //Prix
 
 let DigiBot_Price = 20;
-let GigaBot_Price = 30; 
-let Pixeliteuse_Price = 50;
-let Extracteur_Price = 80;
+let GigaBot_Price = 100; 
+let Pixeliteuse_Price = 500;
+let Extracteur_Price = 2000;
 
 $(document).ready(function(){
     $('.carousel').carousel();//Animation carousel
@@ -15,6 +15,8 @@ $(document).ready(function(){
     pricesInit()
     //------------------Buy Miners-----------------------
     $('#digibotButton').click(buy_DigiBot)
+    $('#gigabotButton').click(buy_GigaBot)
+    setInterval(ppsRefresh, 1000); // Appelle updatePixelitesPerSecond() toutes les secondes
 })
 
 
