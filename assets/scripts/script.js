@@ -11,6 +11,7 @@ let pioche_en_bois_Price = 5
 $(document).ready(function(){
     $('.carousel').carousel();//Animation carousel
     $('.mine').click(clickAddPixelite)
+
 })
 
 

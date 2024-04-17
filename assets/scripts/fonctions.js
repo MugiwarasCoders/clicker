@@ -27,10 +27,10 @@ function unlock_pioche_en_bois(counter) {
         console.log('Vous pouvez acheter une pioche en bois');
         // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
         pioche_en_bois_Price = 5;
-        // document.getElementById("titre_pioche").textContent = "Déverrouillé 🔓"; 
     } else {;
         // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
-        // document.getElementById("titre_pioche").textContent = "Verrouillé 🔒";
-        document.getElementById("image_pioche1").src = "assets/img/pioche_non_debloquee.png";
+        document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
+        document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
+
     }
 }
