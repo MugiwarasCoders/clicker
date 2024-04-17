@@ -210,7 +210,6 @@ h2{
 
 .achat_image_chiffre:active{
   background-color: #d33800c5;
-  
 }
 
 .prix_nom_achat{
@@ -248,4 +247,9 @@ h2{
   width: 100%;
   margin-left: 10%;
   margin-top: 5vh;
+  display: flex;
+}
+
+.unit{
+  width: 15px !important;
 }
