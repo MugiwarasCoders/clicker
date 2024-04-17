@@ -9,12 +9,16 @@
       integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      defer
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <script src="assets/scripts/script.js" defer></script>
-    </script>
+
     <script src="assets/scripts/fonctions.js" defer></script>
     <!-- Compiled and minified CSS -->
     <link
@@ -32,30 +36,27 @@
   </head>
   <body>
     <main>
-    <div>
-      <img
-        src="assets/img/mineur.png"
-        alt="image mineur"
-        class="image_mineur"
-      />
-      <img
-        src="assets/img/vaisseau.png"
-        alt="image vaisseau"
-        class="image_vaisseau"
-      />
-      <div class="compteur">
-        <div>
-          <h5>Pixelites:</h5>
-          <p></p>
+      <div>
+        <img
+          src="assets/img/mineur.png"
+          alt="image mineur"
+          class="image_mineur"
+        />
+        <img
+          src="assets/img/vaisseau.png"
+          alt="image vaisseau"
+          class="image_vaisseau"
+        />
+        <div class="compteur">
+          <div>
+            <h5>Pixelites:</h5>
+            <p></p>
+          </div>
+          <div></div>
         </div>
-        <div></div>
-      </div>
-      <div class="chantier"></div>
+        <div class="chantier"></div>
         <div class="boutique">
-          
           <div class="background">
-            
-
             <div class="ameliorations">
               <h2 class="sous_titre_boutique">Ma pioche</h2>
               <div class="carousel">
@@ -63,40 +64,68 @@
                   <img
                     src="assets/img/pioche_en_bois.webp"
                     alt="image pioche en bois"
-                    class="image_pioche_en_bois"
-                /></a>
+                    class="image_pioche"
+                    id="image_pioche1"
+                  />
+                  <p id="titre_pioche1">Pioche en bois 🪵</p>
+                </a>
                 <a class="carousel-item" href="#two!">
                   <img
                     src="assets/img/pioche_en_pierre.webp"
                     alt="image pioche en pierre"
-                    class="image_pioche_en_pierre"
-                /></a>
+                    class="image_pioche"
+                  />
+                  <p class="titre_pioche">Pioche en pierre 🗿</p>
+                </a>
                 <a class="carousel-item" href="#three!"
                   ><img
                     src="assets/img/pioche_en_fer.webp"
                     alt="image pioche en fer"
-                    class="image_pioche_en_fer"
-                /></a>
+                    class="image_pioche"
+                  />
+                  <p>Pioche en fer 🪨</p>
+                </a>
                 <a class="carousel-item" href="#four!"
                   ><img
                     src="assets/img/pioche_en_or.webp"
                     alt="image pioche en or"
-                    class="image_pioche_en_or"
-                /></a>
+                    class="image_pioche"
+                  />
+                  <p>Pioche en or 🪙</p>
+                </a>
                 <a class="carousel-item" href="#five!">
                   <img
                     src="assets/img/pioche_en_diamant.webp"
                     alt="image pioche en diamant"
-                    class="image_pioche_en_diamant"
-                /></a>
+                    class="image_pioche"
+                  />
+                  <p class="titre_pioche">Pioche en diamant 💎</p>
+                </a>
+                <a class="carousel-item" href="#six!">
+                  <img
+                    src="assets/img/pioche_en_netherite.webp"
+                    alt="image pioche en netherite"
+                    class="image_pioche"
+                  />
+                  <p class="titre_pioche">Pioche en netherite ☄️</p>
+                </a>
                 <a class="carousel-item" href="#six!">
                   <img
                     src="assets/img/pioche_en_pixelite.webp"
                     alt="image pioche en pixelite"
-                    class="image_pioche_en_pixelite"
-                /></a>
+                    class="image_pioche"
+                  />
+                  <p class="titre_pioche">
+                    Pioche en pixelite<img
+                      src="assets/img/pixelite.png"
+                      alt="image pixelite"
+                      class="mini_image_pixelite"
+                    />
+                  </p>
+                </a>
               </div>
-              <button class="bouton_ameliorer">AMELIORER</button>
+
+              <div class="bouton_ameliorer"><p>AMELIORER</p></div>
             </div>
 
             <section class="mineurs">
@@ -107,29 +136,30 @@
                   alt="image DigiBot"
                   class="image_achat"
                 />
-                <button class="prix_nom_achat">
+                <div class="prix_nom_achat">
                   <div>
                     <h3 class="nom_achat">Digibot</h3>
+                    <p class="chiffre_prix_mineur">50</p>
                     <p class="prix_mineurs">Pixelites</p>
+                  </div>
+                  <p class="chiffre_mineur">0</p>
                 </div>
-                <p class="chiffre_mineur">0</p>
-                </button>
               </div>
-              
+
               <div class="achat_image_chiffre">
                 <img
                   src="assets/img/GigaBot.png"
                   alt="image GigaBot"
                   class="image_achat"
                 />
-                <button class="prix_nom_achat">
+                <div class="prix_nom_achat">
                   <div>
                     <h3 class="nom_achat">Gigabot</h3>
+                    <p class="chiffre_prix_mineur">100</p>
                     <p class="prix_mineurs">Pixelites</p>
+                  </div>
+                  <p class="chiffre_mineur">0</p>
                 </div>
-                <p class="chiffre_mineur">0</p>
-
-                </button>
               </div>
 
               <div class="achat_image_chiffre">
@@ -138,16 +168,15 @@
                   alt="image Pixeliteuse"
                   class="image_achat"
                 />
-                <button class="prix_nom_achat">
+                <div class="prix_nom_achat">
                   <div>
                     <h3 class="nom_achat">Pixeliteuse</h3>
+                    <p class="chiffre_prix_mineur">500</p>
                     <p class="prix_mineurs">Pixelites</p>
+                  </div>
+                  <p class="chiffre_mineur">0</p>
                 </div>
-                <p class="chiffre_mineur">0</p>
-
-                </button>
               </div>
-              
 
               <div class="achat_image_chiffre">
                 <img
@@ -155,20 +184,20 @@
                   alt="image extracteur de pixelite"
                   class="image_achat"
                 />
-                <button class="prix_nom_achat">
+                <div class="prix_nom_achat">
                   <div>
                     <h3 class="nom_achat">Extracteur</h3>
+                    <p class="chiffre_prix_mineur">1000</p>
                     <p class="prix_mineurs">Pixelites</p>
+                  </div>
+                  <p class="chiffre_mineur">0</p>
                 </div>
-                <p class="chiffre_mineur">0</p>
-
-                </button>
               </div>
             </section>
           </div>
         </div>
       </div>
-      
+
       <div class="mine"><img src="assets/img/mine.png" alt="image mine" /></div>
     </main>
   </body>

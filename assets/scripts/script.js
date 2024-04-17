@@ -5,7 +5,8 @@ let counter = 0;
 //Prix
 
 let DigiBot_Price = 20;
-let GigaBot_Price = 30; 
+let GigaBot_Price = 30;
+let pioche_en_bois_Price = 5
 
 $(document).ready(function(){
     $('.carousel').carousel();//Animation carousel

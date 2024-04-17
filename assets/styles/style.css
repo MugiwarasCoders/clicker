@@ -45,7 +45,7 @@ main{
 }
 
 .boutique{
-  height: 95vh;
+  height: 100vh;
   width: 20vw;
   background-size: cover;
   position: absolute;   
@@ -54,13 +54,10 @@ main{
 }
 
 .background{
-  height: 92vh;
+  height: 97vh;
   margin: 12px;
-  border-radius: 5px;
-  background-color: rgba(253, 254, 254, 0.233);
   border-radius: 10px;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  
 
 }
 
@@ -89,18 +86,18 @@ main{
 .boutique_complete{
   display: flex;
   flex-direction: column;
-  
 }
 
 .sous_titre_boutique{
+  text-align: center;
   margin: 0;
-  margin-top: 1vh;
+  margin-top: 1.5vh;
   font-size: 200%;
   color:aliceblue;
   border-radius: 10px;
-  background-color: #892626dd;
+  background-color: #2b2424dd;
   padding: 2px;
-  
+  width: 70%;
 }
 
 .image_mineur{
@@ -128,19 +125,34 @@ h2{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 10vh !important;
-  
+  height: 13vh !important;
+  margin-top: 2vh;
 }
 
 .carousel-item{
   display: flex !important;
+  flex-direction: column;
   justify-content: center !important;
   align-items: center !important; 
+  color: black;
 }
 
-.carousel img{
+.carousel-item p{
+  margin-top: 0;
+}
+
+.titre_pioche{
+  margin-left: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.image_pioche{
   width: 35% !important;
- 
+}
+
+.titre_pioche img{
+  margin-left: 3%;
 }
 
 .ameliorations{
@@ -149,14 +161,22 @@ h2{
   justify-content: center !important;
   width: 100% ;
   align-items: center;
-  margin-top: 2vh ;
-  border-bottom: solid 8px #892636;
- 
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  background-color: rgba(253, 254, 254, 0.233);
+  border-radius: 10px;
+  margin-bottom: 2vh;
+  border: solid 4px #8E302F;
+
 }
 
 .carousel_entier{
   width: 50%;
   height: 50%;
+}
+
+.mini_image_pixelite{
+  width: 10% !important;
 }
 
 .bouton_ameliorer{
@@ -167,22 +187,30 @@ h2{
   border-radius: 10px;
   background-color: #8C3030;
   color: white;
+  text-align: center;
+  border: ridge 2px black;
+   user-select: none; /*permet d'empecher la copie du texte du bouton */
 }
 
 .bouton_ameliorer:hover{
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  background-color: #cc511cda;
-
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #d33800b9;
 }
 
 .bouton_ameliorer:active{
-  background-color: #8C3030 !important;
+  background-color: #b1976991;
+  border: groove 2px black;
+
 }
 
 .bouton_ameliorer:focus{
   background-color: #8C3030 !important;
   
+}
+
+.bouton_ameliorer p{
+  margin: 0;
 }
 
 .image_pixelite{
@@ -202,51 +230,57 @@ h2{
 
 .nom_achat{
   margin-top: 0;
+  margin-bottom: 0;
   font-size: 150%;
 
 }
 
 .image_achat{
-  border-right: solid 2px black;
+  border-right: solid 3px black;
   background-color: #892626dd;
   height: 20 !important;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
-
+  user-select: none; /*permet d'empecher la copie du texte du bouton */
 }
 
 .achat_image_chiffre{
   display: flex;
   margin-top: 2vh;
-  border: solid 2px black;
+  border: solid 3px black;
   border-radius: 10px;
   width: 88%;
+}
+
+.chiffre_prix_mineur{
+  margin: 0;
+  text-align: center;
+  color: aliceblue;
 }
 
 .prix_nom_achat{
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
-  width: 100%;
+  width: 172px;
   height: 100%;
   display: flex;
   align-items: center;
   background-color: #e5663898;
   margin-bottom: 0;
+  border: ridge 2px black;
+  border-left: none;
+  user-select: none; /*permet d'empecher la copie du texte du bouton */
 }
 
 .prix_nom_achat:hover{
   cursor: pointer;
   background-color: #d338009e;
-}
-
-.prix_nom_achat:focus{
-  background-color: #e5663898 !important;
-
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .prix_nom_achat:active{
-  background-color: none !important;
-  
+  background-color: #f6bf6191;
+  border: groove 2px black;
 }
 
 .prix_nom_achat p{
@@ -265,12 +299,16 @@ h2{
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  background-color: rgba(253, 254, 254, 0.233);
+  border-radius: 10px;
+  height: 62vh;
+  border: solid 4px #8E302F;
 }
 
 .prix_mineurs{
-  margin-left: 5px;
-  text-align: center;
+  margin-top: 0;
+  margin-left: 5%;
   width: 100%;
-  margin-left: 10%;
-  margin-top: 5vh;
 }
