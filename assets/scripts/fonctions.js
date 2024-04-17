@@ -3,7 +3,7 @@ function clickAddPixelite(){
     $('.compteur p').html(counter+'<img src="assets/img/pixelite.png" style="width: 30px">')
     unlock_DigiBot(counter)
     unlock_GigaBot(counter)
-    unlock_pioche_en_bois(counter)
+    
 }
 
 //----------------Unlock Miners----------------
@@ -22,15 +22,4 @@ function unlock_GigaBot(counter){
     }
 }
 
-function unlock_pioche_en_bois(counter) {
-    if (counter === pioche_en_bois_Price) {
-        console.log('Vous pouvez acheter une pioche en bois');
-        // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
-        pioche_en_bois_Price = 5;
-        // document.getElementById("titre_pioche").textContent = "Déverrouillé 🔓"; 
-    } else {;
-        // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
-        // document.getElementById("titre_pioche").textContent = "Verrouillé 🔒";
-        document.getElementById("image_pioche1").src = "assets/img/pioche_non_debloquee.png";
-    }
-}
+
