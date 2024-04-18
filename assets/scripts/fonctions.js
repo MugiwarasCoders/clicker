@@ -9,7 +9,6 @@ function clickAddPixelite(){
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
 }
 
-
 //----------------Saves----------------
 function save(){
     pixelitePerSecond = localStorage.getItem('pixelitePerSecond')
@@ -57,10 +56,6 @@ function unlock_pioche_en_bois(counter) {
         document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
         document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
     }
-}
-
-function unlock_stonePickaxe(){
-    $('.image_mineur').attr('src', 'assets/img/mineur_pierre.gif')
 }
 
 //----------------Unlock Miners----------------
@@ -191,6 +186,11 @@ function popPixelite(event){
         left: posX,
         top: posY
     }).fadeIn()
+}
+
+function shakeStone(){
+    $('.mine').addClass('animate__animated animate__bounceOut').fadeIn()
+    setTimeout(function(){$('.mine').removeClass('animate__animated animate__bounceOut')}, 100)
 }
 
 //------------Interface----------------------

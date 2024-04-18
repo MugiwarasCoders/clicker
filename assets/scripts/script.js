@@ -42,11 +42,15 @@ $('.mine').click(function(){
     }
     //On fait apparaître des pixelites dans des directions random à chaque clic
     popPixelite(event)
+    //on fait trembler la roche
+    shakeStone()
 })
 
 $('.bouton_ameliorer').click(function(){
     unlock_stonePickaxe()
 })
+
+
 
 
 
