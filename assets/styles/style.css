@@ -96,6 +96,15 @@ main{
   opacity: 0.5;
 }
 
+#muteSounds{
+  position: absolute;
+  background-color: black;
+  left: 1vw;
+  top: 15vw;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 /*----------------------------younes-----------------------------*/
 
 .background{

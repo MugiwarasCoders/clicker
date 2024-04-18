@@ -23,6 +23,19 @@ function playButtonSound(){
     buttonSound.play();
 }
 
+function muteSounds(){
+    let sons = $('audio')
+    for (let i = 0; i < sons.length; i++){
+        sons[i].muted = !sons[i].muted;
+        if (sons[i].muted){
+            $('#muteSounds').html('🔇')
+        }
+        else{
+            $('#muteSounds').html('🔊')
+        }
+    }
+}
+
 //----------------Saves----------------
 function save(){
     pixelitePerSecond = localStorage.getItem('pixelitePerSecond')
@@ -213,7 +226,6 @@ function enableButton(){
         // let counter = localStorage.getItem('counter')
         let nom = $(this).find('.nom_achat').text()
         let price = localStorage.getItem(''+nom+'_Price')
-        console.log(price)
         if (counter >= price && price != null){
             $(this).parent('.achat_image_chiffre').removeClass('disabled')
         }
