@@ -353,3 +353,22 @@ h2{
   display: none;
   position: absolute;
 }
+
+.cadenas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+}
+
+.carousel{
+  display: flex;
+  align-items: center;
+  height: 150px !important;
+}
+
+.image_cadenas{
+  width: 150px!important;
+}
