@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fonts/Minecraft.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Minecraft', sans-serif;
+  background-image: url('../img/background.png');
+  background-size: cover;
+}
+
+main{
+  display: flex;
+  min-height: 100vh;
+
+}
+
+/*-------------------BURTON----------------------*/
+
+/*-------------Compteur-----------*/
+.compteur{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25vh;
+  width: 10vw;
+  background-color: #e5683765;
+  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  position: absolute;
+  left: 1vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.compteur img{
+  width: 60px;
+}
+
+.compteur hr{
+  width: 80%;
+}
+
+.compteur h5, .compteur p{
+  margin: 0;
+}
+
+.compteur p{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.chantier{
+  min-height: 25vh;
+  width: 65vw;
+  background-image: url('../img/background_chantier.jpg');
+  position: absolute;
+  left: 13vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.boutique{
+  height: 100vh;
+  width: 20vw;
+  background-size: cover;
+  position: absolute;   
+  right: 1vw;
+  border-radius: 5px;
+}
+
+.background{
+  height: 97vh;
+  margin: 12px;
+  border-radius: 10px;
+  
+
+}
+
+.mine{
+  position: absolute;
+  bottom: 9vh;
+  left: 43vw;
+}
+
+.mine img{
+  width: 250px;
+}
+
+/*----------------------------younes-----------------------------*/
+
+.background{
+
+}
+
+.chantier{
+  margin-top: 1vh;
+  border: solid 10px #8C3030;
+  border-radius: 10px;
+}
+
+.boutique_complete{
+  display: flex;
+  flex-direction: column;
+}
+
+.sous_titre_boutique{
+  text-align: center;
+  margin: 0;
+  margin-top: 1.5vh;
+  font-size: 200%;
+  color:aliceblue;
+  border-radius: 10px;
+  background-color: #2b2424dd;
+  padding: 2px;
+  width: 70%;
+}
+
+.image_mineur{
+  position: absolute;
+  right: 59%;
+  bottom: 7%;
+  width: 5%;
+  z-index: 2;
+}
+
+.image_vaisseau{
+  position: absolute;
+  right: 62%;
+  bottom: 38%;
+  width: 12%;
+  z-index: 3;
+}
+
+h2{
+  font-size: 5%;
+}
+
+.carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 13vh !important;
+  margin-top: 2vh;
+}
+
+.carousel-item{
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important; 
+  color: black;
+}
+
+.carousel-item p{
+  margin-top: 0;
+}
+
+.titre_pioche{
+  margin-left: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.prix_pioche{
+  display: flex;
+  align-items: center;
+}
+
+.prix_pioche img{
+  width: 25px;
+}
+
+.image_pioche{
+  width: 35% !important;
+}
+
+.titre_pioche img{
+  margin-left: 3%;
+}
+
+.ameliorations{
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  width: 100% ;
+  align-items: center;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  background-color: rgba(253, 254, 254, 0.233);
+  border-radius: 10px;
+  margin-bottom: 2vh;
+  border: solid 4px #8E302F;
+}
+
+.carousel_entier{
+  width: 50%;
+  height: 50%;
+}
+
+.mini_image_pixelite{
+  width: 10% !important;
+}
+
+.bouton_ameliorer{
+  margin-top: 2vh;
+  margin-bottom: 1.5vh;
+  width: 40%;
+  border-radius: 10px;
+  background-color: #8C3030;
+  color: white;
+  text-align: center;
+  border: ridge 2px black;
+   user-select: none; /*permet d'empecher la copie du texte du bouton */
+}
+
+.bouton_ameliorer:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #d33800b9;
+}
+
+.bouton_ameliorer:active{
+  background-color: #b1976991;
+  border: groove 2px black;
+}
+
+.bouton_ameliorer:focus{
+  background-color: #8C3030 !important;
+  
+}
+
+.bouton_ameliorer p{
+  margin: 0;
+}
+
+.image_pixelite{
+  width: 100%;
+}
+
+.titre_boutique{
+  color: white;
+  font-size: 300%;
+
+  margin: 0 ;
+}
+
+.nom_achat{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.image_achat{
+  border-right: solid 3px black;
+  background-color: #892626dd;
+  max-height: 90px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  user-select: none; /*permet d'empecher la copie du texte du bouton */
+}
+
+.achat_image_chiffre{
+  display: flex;
+  width: 90%;
+  margin: 10px 0 !important;
+  border: solid 3px black;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.chiffre_prix_mineur{
+  margin: 0;
+  text-align: center;
+  color: aliceblue;
+}
+
+.prix_nom_achat{
+  max-height: 90px;
+  width: 100%;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e5663898;
+  margin-bottom: 0;
+  border: ridge 2px black;
+  border-left: none;
+  user-select: none; /*permet d'empecher la copie du texte du bouton */
+}
+
+.prix_nom_achat:hover{
+  cursor: pointer;
+  background-color: #d338009e;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.prix_nom_achat:active{
+  background-color: #f6bf6191;
+  border: groove 2px black;
+}
+
+.chiffre_mineur{
+  font-size: 40px;
+}
+
+.mineurs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  background-color: rgba(253, 254, 254, 0.233);
+  border-radius: 10px;
+  border: solid 4px #8E302F;
+}
+
+.prix_mineurs{
+  margin-top: 0;
+  margin-left: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.prix_mineurs img{
+  width: 20px;
+}
+
+.infos_mineur{
+  margin-left: 10px;
+}
+
+.notification{
+  position: absolute;
+  background-color: black;
+  color: rgb(88, 4, 4);
+  top: 8vh;
+  left: 25vw;
+  z-index: 100;
+  font-size: 25px;
+}
+
+.mineurPixelite{
+  position: absolute;
+  width: 100px;
+  bottom: 17vh;
+  right: 37vw;
+}
+
+.popPixelite{
+  width: 50px !important;
+  display: none;
+  position: absolute;
+}
+
+.cadenas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+}
+
+.carousel{
+  display: flex;
+  align-items: center;
+  height: 150px !important;
+}
+
+.image_cadenas{
+  width: 150px!important;
+}
