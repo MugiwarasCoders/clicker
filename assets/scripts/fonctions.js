@@ -7,6 +7,33 @@ function clickAddPixelite(){
     localStorage.setItem('counter', counter)
     localStorage.setItem('clickerGain', clickerGain)
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
+    playClicSound()
+}
+
+//----------------Sounds----------------
+function playClicSound(){
+    let clicSound = $('#clicSound')[0];
+    clicSound.currentTime = 0; // Réinitialise le son à partir du début
+    clicSound.play(); // Joue le son
+}
+
+function playButtonSound(){
+    let buttonSound = $('#buttonSound')[0];
+    buttonSound.currentTime = 0;
+    buttonSound.play();
+}
+
+function muteSounds(){
+    let sons = $('audio')
+    for (let i = 0; i < sons.length; i++){
+        sons[i].muted = !sons[i].muted;
+        if (sons[i].muted){
+            $('#muteSounds').html('🔇')
+        }
+        else{
+            $('#muteSounds').html('🔊')
+        }
+    }
 }
 
 //----------------Saves----------------
@@ -20,9 +47,13 @@ function save(){
 
 function pricesInit(){
     $('#digibotPrice').html(DigiBot_Price+'<img class="unit" src="assets/img/pixelite.png">')
+    localStorage.setItem('Digibot_Price', DigiBot_Price)    
     $('#gigabotPrice').html(GigaBot_Price+'<img class="unit" src="assets/img/pixelite.png">')
+    localStorage.setItem('Gigabot_Price', GigaBot_Price)
     $('#pixeliteusePrice').html(Pixeliteuse_Price+'<img class="unit" src="assets/img/pixelite.png">')
+    localStorage.setItem('Pixeliteuse_Price', Pixeliteuse_Price)
     $('#extracteurPrice').html(Extracteur_Price+'<img class="unit" src="assets/img/pixelite.png">')
+    localStorage.setItem('Extracteur_Price', Extracteur_Price)
 }
 
 //La fonction rafraichit le compteur tous les 10èmes de seconde et permet de dévérouiller le objets 
@@ -34,7 +65,8 @@ function counterRefresh(){
     unlock_GigaBot(counter)
     unlock_Pixeliteuse(counter)
     unlock_Extracteur(counter)
-    unlock_pioche_en_bois(counter)
+
+    enableButton()
 }
 
 function ppsRefresh(){
@@ -42,21 +74,11 @@ function ppsRefresh(){
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
     counter += pixelitePerSecond
     counterRefresh()
-    unlock_pioche_en_bois(counter)
 }
 
 //----------------Unlock Pickaxes----------------
 
-function unlock_pioche_en_bois(counter) {
-    if (counter >= pioche_en_bois_Price) {
-        // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
-        pioche_en_bois_Price = 5;
-    } else {
-        // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
-        document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
-        document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
-    }
-}
+
 
 //----------------Unlock Miners----------------
 
@@ -197,4 +219,18 @@ function shakeStone(){
 function notification(texte){
     $('.notification').text(texte).fadeIn();
     setTimeout(function(){$('.notification').text(texte).fadeOut()}, 2000);
+}
+
+function enableButton(){
+    $('.prix_nom_achat').each(function(){
+        // let counter = localStorage.getItem('counter')
+        let nom = $(this).find('.nom_achat').text()
+        let price = localStorage.getItem(''+nom+'_Price')
+        if (counter >= price && price != null){
+            $(this).parent('.achat_image_chiffre').removeClass('disabled')
+        }
+        else{
+            $(this).parent('.achat_image_chiffre').addClass('disabled')
+        }
+    })
 }
