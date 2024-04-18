@@ -10,13 +10,13 @@ let Pixeliteuse_Price = 500;
 let Extracteur_Price = 2000;
 
 //Pioches
-let pioche_en_bois_Price = 5
-let pioche_en_pierre_Price = 5
-let pioche_en_fer_Price = 500
-let pioche_en_or_Price = 2000
-let pioche_en_diamant_Price = 5000
-let pioche_en_netherite_Price = 10000
-let pioche_en_pixelite_Price = 20000
+let wooden_pickAxe_Price = 5
+let stone_pickAxe_Price = 10
+let iron_pickAxe_Price = 500
+let gold_pickAxe_Price = 2000
+let dimaond_pickAxe_Price = 5000
+let netherite_pickaxe_Price = 10000
+let pixelite_pickAxe_Price = 20000
 
 
 
@@ -28,6 +28,8 @@ $(document).ready(function(){
     $('#digibotButton').click(buy_DigiBot)
     $('#gigabotButton').click(buy_GigaBot)
     setInterval(ppsRefresh, 1000); // Appelle updatePixelitesPerSecond() toutes les secondes
+    $('#cadenas_pioche_en_bois').click(unlock_woodPickaxe)
+    $('#cadenas_pioche_en_pierre').click(unlock_stonePickaxe)
 
 })
 
@@ -40,10 +42,7 @@ $('.mine').click(function(){
 })
 
 //------------------BOUTON AMELIORER PIOCHE-----------------------
-$('.bouton_acheter').click(function(){
-    $('#bouton_acheter').ready(unlock_pioche_en_bois)
-    
-})
 
+// $('#cadenas_pioche_en_bois').click(unlock_stonePickaxe)
 
-
+// $('#cadenas_pioche_en_pierre').click(unlock_pioche_en_pierre)

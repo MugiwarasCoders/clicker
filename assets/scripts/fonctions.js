@@ -126,16 +126,83 @@ function buy_GigaBot(){
 
 
 //------------Buy PickAxes----------------------
-function unlock_pioche_en_bois(){
-    if (counter >= pioche_en_bois_Price){
-        counter = counter - pioche_en_bois_Price;
-        $('#prix_pioche_en_bois').html('débloqué.')
-        $('.bouton_acheter').fadeOut()
-        $('#pioche_en_pierre').html('Pioche en pierre 🗿')
-        $('#image_pioche_en_pierre').attr('src', '../assets/img/pioche_en_pierre.webp')
-        $('#pioche_en_pierre').html( "??? <img src='assets/img/pixelite.png' alt='image pixelite'/>")
+function unlock_woodPickaxe(){
+    if (counter >= wooden_pickAxe_Price){
+        // $('.image_mineur').attr('src', 'assets/img/mineur_bois.gif')
+         counter = counter - wooden_pickAxe_Price;
+        $('#cadenas_pioche_en_bois').attr('src', '../assets/img/image_cadenas_ouvert.png');
+        $('#prix_pioche_en_bois').html('débloqué');
+        $('#cadenas_pioche_en_bois').fadeOut("slow");
+        $('#pioche_en_pierre').html('Pioche en pierre 🗿');
+        $('#image_pioche_en_pierre').attr('src', '../assets/img/pioche_en_pierre.webp');
+        $('#prix_pioche_en_pierre').html("Prix : " + stone_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+        return true; // Renvoyer true pour indiquer que le déblocage a réussi
+    }
+    else{
+        return false
     }
 }
+
+function unlock_stonePickaxe(){
+    unlock_woodPickaxe()
+    let iswoodPickaxeUnlocked = unlock_woodPickaxe()
+    if (iswoodPickaxeUnlocked){
+        if (counter >= stone_pickAxe_Price){
+            // $('.image_mineur').attr('src', 'assets/img/mineur_bois.gif')
+            counter = counter - stone_pickAxe_Price;
+            $('#cadenas_pioche_en_pierre').attr('src', '../assets/img/image_cadenas_ouvert.png');
+            $('#prix_pioche_en_pierre').html('débloqué');
+            $('#cadenas_pioche_en_pierre').fadeOut("slow");
+            $('#pioche_en_fer').html('Pioche en fer 🪨');
+            $('#image_pioche_en_fer').attr('src', '../assets/img/pioche_en_pierre.webp');
+            $('#prix_pioche_en_fer').html("Prix : " + iron_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+            return true; // Renvoyer true pour indiquer que le déblocage a réussi
+        }
+    }
+    else{
+        return false
+    }
+}
+// function unlock_pioche_en_bois() {
+//     if (counter >= pioche_en_bois_Price) {
+//         return false;
+//     } else {
+//         counter = counter - pioche_en_bois_Price;
+//         $('#cadenas_pioche_en_bois').attr('src', '../assets/img/image_cadenas_ouvert.png');
+//         $('#prix_pioche_en_bois').html('débloqué');
+//         $('#cadenas_pioche_en_bois').fadeOut("slow");
+//         $('#pioche_en_pierre').html('Pioche en pierre 🗿');
+//         $('#image_pioche_en_pierre').attr('src', '../assets/img/pioche_en_pierre.webp');
+//         $('#prix_pioche_en_pierre').html("Prix : " + pioche_en_pierre_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+//         return true; // Renvoye  r true pour indiquer que le déblocage a réussi
+//     }    
+// }    
+
+// function unlock_pioche_en_pierre(){
+//     if (pioche_en_bois_un === false) {
+//         // Si la pioche en bois n'est pas débloquée, la fonction ne fait rien
+//         return;
+//     } else {
+//         // Si la pioche en bois est débloquée, continuer avec le reste du code
+//         if (counter >= pioche_en_pierre_Price) {
+//             counter = counter - pioche_en_pierre_Price;
+//             $('#cadenas_pioche_en_pierre').attr('src', '../assets/img/image_cadenas_ouvert.png')
+//             $('#prix_pioche_en_pierre').html('débloqué.')
+//             $('#cadenas_pioche_en_pierre').fadeOut("slow")
+//             $('#pioche_en_fer').html('Pioche en fer 🪨')
+//             $('#image_pioche_en_fer').attr('src', '../assets/img/pioche_en_fer.webp')
+//             $('#prix_pioche_en_fer').html("Prix : " + pioche_en_pierre_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>")
+//         }
+//     }
+// }
+
+// function app(){
+//     const result_pioche_en_bois = unlock_pioche_en_bois()
+//     console.log(result_pioche_en_bois)
+// }
+
+// app();
+
 // function PickaxesLocked() {
 //     var text_bouton = document.getElementByClassName("bouton_acheter");
 //     // Trouver le nombre maximum d'éléments parmi les différentes classes
