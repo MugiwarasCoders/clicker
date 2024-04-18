@@ -7,7 +7,6 @@ function clickAddPixelite(){
     unlock_GigaBot(counter)
     unlock_Pixeliteuse(counter)
     unlock_Extracteur(counter)
-    unlock_pioche_en_bois(counter)
     localStorage.setItem('counter', counter)
     localStorage.setItem('clickerGain', clickerGain)
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
@@ -40,7 +39,6 @@ function ppsRefresh(){
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
     counter += pixelitePerSecond
     counterRefresh()
-    unlock_pioche_en_bois(counter)
 }
 
 //----------------Unlock Miners----------------
@@ -124,14 +122,34 @@ function buy_GigaBot(){
 }
 
 
-function unlock_pioche_en_bois(counter) {
-    if (counter === pioche_en_bois_Price) {
-        console.log('Vous pouvez acheter une pioche en bois');
-        // document.getElementById("bouton_ameliorer").textContent = "AMÉLIORER";
-        pioche_en_bois_Price = 5;
-    } else {;
-        // document.getElementById("bouton_ameliorer").textContent = "5 <img src='assets/img/pixelite.png'/>";
-        document.getElementById("image_pioche1").src = "assets/img/pioche_en_bois.webp";
-        document.getElementById("titre_pioche1").textContent = "Pioche en bois 🪵";
+
+
+
+//------------Buy PickAxes----------------------
+function unlock_pioche_en_bois(){
+    if (counter >= pioche_en_bois_Price){
+        counter = counter - pioche_en_bois_Price;
+        $('#prix_pioche_en_bois').html('débloqué.')
+        $('.bouton_acheter').fadeOut()
+        $('#pioche_en_pierre').html('Pioche en pierre 🗿')
+        $('#image_pioche_en_pierre').attr('src', '../assets/img/pioche_en_pierre.webp')
+        $('#pioche_en_pierre').html( "??? <img src='assets/img/pixelite.png' alt='image pixelite'/>")
     }
 }
+// function PickaxesLocked() {
+//     var text_bouton = document.getElementByClassName("bouton_acheter");
+//     // Trouver le nombre maximum d'éléments parmi les différentes classes
+//     // Itérer sur le nombre maximum d'éléments 
+//         if (counter >= pioche_en_bois_Price){
+//             counter = counter - pioche_en_bois_Price;
+//             $('.bouton_acheter').html('non')
+//         }    
+// }
+
+// var pioches = document.getElementsByClassName("image_pioche");
+// var titres = document.getElementsByClassName("titre_pioche");
+// var prix_pioche = document.getElementsByClassName("prix_pioche");
+
+    
+
+//faire recommencer la pickaxeslocked grace à une autre fonction onclick sur les images du carousel

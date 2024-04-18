@@ -2,6 +2,8 @@ body{
     background-image: url('../img/background.png');
     background-size: cover;
     font-family: "Pixelify Sans";
+    user-select: none; /*permet d'empecher la copie du texte du bouton */
+
 }
 
 main{
@@ -74,12 +76,18 @@ main{
   position: absolute;
   bottom: 9vh;
   left: 43vw;
+  background-color: blue;
+  border-radius: 150px; 
+  background: linear-gradient(180deg, rgba(18, 181, 67, 0.1), transparent);
 }
 
 .mine img{
   width: 250px;
+  border-radius: 150px; 
 }
-
+.mine img:hover{
+  cursor: pointer;
+}
 /*----------------------------younes-----------------------------*/
 
 .background{
@@ -100,6 +108,7 @@ main{
 .sous_titre_boutique{
   text-align: center;
   margin: 0;
+  margin-bottom: 2vh;
   margin-top: 1.5vh;
   font-size: 200%;
   color:aliceblue;
@@ -134,7 +143,7 @@ h2{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 13vh !important;
+  height: 16vh !important;
   margin-top: 2vh;
 }
 
@@ -144,16 +153,38 @@ h2{
   justify-content: center !important;
   align-items: center !important; 
   color: black;
+  height: 290px !important; 
+  margin-bottom: 10vh !important;
+
+}
+.pioche_pixelite{
+  margin-top: 2vh;
 }
 
 .carousel-item p{
   margin-top: 0;
 }
 
+.pioche_en_bois,
 .titre_pioche{
-  margin-left: 12%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.prix_pioche{
+  width: 100%;
+  text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.prix_pioche img{
+  width: 10% !important;
 }
 
 .image_pioche{
@@ -180,17 +211,35 @@ h2{
 }
 
 .carousel_entier{
+  position: absolute;
+  z-index: 2;
   width: 50%;
   height: 50%;
+  
 }
 
 .mini_image_pixelite{
   width: 10% !important;
 }
 
-.bouton_ameliorer{
+
+.cadenas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 18%;
+  right: 12%;
+}
+
+.image_cadenas{
+  width: 150px!important;
+}
+
+/* .bouton_acheter{
   font-family: "Pixelify Sans";
-  margin-top: 2vh;
   margin-bottom: 1.5vh;
   width: 40%;
   border-radius: 10px;
@@ -199,26 +248,26 @@ h2{
   text-align: center;
   border: ridge 2px black;
    user-select: none; /*permet d'empecher la copie du texte du bouton */
-}
 
-.bouton_ameliorer:hover{
+
+.bouton_acheter:hover{
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   background-color: #d33800b9;
 }
 
-.bouton_ameliorer:active{
+.bouton_acheter:active{
   background-color: #b1976991;
   border: groove 2px black;
 
 }
 
-.bouton_ameliorer:focus{
+.bouton_acheter:focus{
   background-color: #8C3030 !important;
   
 }
 
-.bouton_ameliorer p{
+.bouton_acheter p{
   margin: 0;
 }
 
