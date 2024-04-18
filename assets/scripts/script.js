@@ -16,14 +16,17 @@ $(document).ready(function(){
     $('.carousel').carousel();//Animation carousel
     pricesInit()
     $('.mine').click(clickAddPixelite)
+    $('.achat_image_chiffre').click(playButtonSound)
     //------------------Buy Miners-----------------------
     $('#digibotButton').click(buy_DigiBot)
     $('#gigabotButton').click(buy_GigaBot)
     $('#pixeliteuseButton').click(buy_Pixeliteuse)
     $('#extracteurButton').click(buy_Extracteur)
+    $('.prix_nom_achat').click(enableButton)
     setInterval(ppsRefresh, 1000); // Appelle ppsRefresh() toutes les secondes
     setInterval(counterRefresh, 100); // Appelle ppsRefresh() toutes les secondes
 })
+
 
 //------------------Animations-----------------------
 let i = 0
@@ -46,9 +49,6 @@ $('.mine').click(function(){
     shakeStone()
 })
 
-$('.bouton_ameliorer').click(function(){
-    unlock_stonePickaxe()
-})
 
 
 

@@ -7,6 +7,11 @@ body {
   font-family: 'Minecraft', sans-serif;
   background-image: url('../img/background.png');
   background-size: cover;
+  user-select: none;
+}
+
+img{
+  -webkit-user-drag: none;
 }
 
 main{
@@ -83,6 +88,12 @@ main{
 
 .mine img{
   width: 250px;
+}
+
+.disabled{
+  background-color: #f0f0f0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /*----------------------------younes-----------------------------*/
@@ -342,10 +353,7 @@ h2{
 }
 
 .mineurPixelite{
-  position: absolute;
-  width: 100px;
-  bottom: 17vh;
-  right: 37vw;
+  width: 100px !important;
 }
 
 .popPixelite{
@@ -372,3 +380,5 @@ h2{
 .image_cadenas{
   width: 150px!important;
 }
+
+
