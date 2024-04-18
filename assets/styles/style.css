@@ -161,6 +161,15 @@ h2{
   align-items: center;
 }
 
+.prix_pioche{
+  display: flex;
+  align-items: center;
+}
+
+.prix_pioche img{
+  width: 25px;
+}
+
 .image_pioche{
   width: 35% !important;
 }
