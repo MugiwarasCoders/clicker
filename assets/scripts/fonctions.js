@@ -47,10 +47,10 @@ function muteSounds(){
     for (let i = 0; i < sons.length; i++){
         sons[i].muted = !sons[i].muted;
         if (sons[i].muted){
-            $('#muteSounds').html("<img src='assets/img/mute.png'")
+            $('#muteSounds').attr('src', 'assets/img/mute.png')
         }
         else{
-            $('#muteSounds').html("<img src='assets/img/unmute.png'")
+            $('#muteSounds').attr('src', 'assets/img/unmute.png')
         }
     }
 }
