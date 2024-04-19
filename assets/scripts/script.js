@@ -17,6 +17,7 @@ $(document).ready(function(){
     pricesInit()
     $('.mine').click(clickAddPixelite)
     $('.achat_image_chiffre').click(playButtonSound)
+    $('#muteSounds').click(playButtonSound)
     $('#muteSounds').click(muteSounds)
     //------------------Buy Miners-----------------------
     $('#digibotButton').click(buy_DigiBot)

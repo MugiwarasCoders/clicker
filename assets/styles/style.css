@@ -54,6 +54,8 @@ main{
   font-size: 20px;
 }
 
+/*---------Chantier----------------------------*/
+
 .chantier{
   min-height: 25vh;
   width: 65vw;
@@ -62,6 +64,17 @@ main{
   left: 13vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+.chantier img{
+  height: 40px;
+}
+
+.minersChantier{
+  width: 70%;
+  margin: auto;
+}
+
+/**/
 
 .boutique{
   height: 100vh;
@@ -84,10 +97,24 @@ main{
   position: absolute;
   bottom: 9vh;
   left: 43vw;
+  cursor: pointer;
 }
 
-.mine img{
-  width: 250px;
+
+.disabled{
+  background-color: #f0f0f0;
+  cursor: url('../cursor/wow/loot_disabled.png'), auto;
+  opacity: 0.5;
+}
+
+#muteSounds{
+  position: absolute;
+  background-color: black;
+  left: 1vw;
+  top: 15vw;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .disabled{

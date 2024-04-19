@@ -131,6 +131,9 @@ function buy_DigiBot(){
     else{
         notification(notEnoughMoney)
     }
+    if ($('#digibotNumber').text() % 5 == 0){
+        $('.digibots').append('<img src="assets/img/Digibot.png">')
+    }
 }
 
 function buy_GigaBot(){
@@ -151,6 +154,9 @@ function buy_GigaBot(){
     }
     else{
         notification(notEnoughMoney)
+    }
+    if ($('#gigabotNumber').text() % 5 == 0){
+        $('.gigabots').append('<img src="assets/img/Gigabot.png">')
     }
 }
 
@@ -173,6 +179,9 @@ function buy_Pixeliteuse(){
     else{
         notification(notEnoughMoney)
     }
+    if ($('#pixeliteuseNumber').text() % 5 == 0){
+        $('.pixeliteuses').append('<img src="assets/img/Pixeliteuse.png">')
+    }
 }
 
 function buy_Extracteur(){
@@ -193,6 +202,9 @@ function buy_Extracteur(){
     }
     else{
         notification(notEnoughMoney)
+    }
+    if ($('#extracteurNumber').text() % 5 == 0){
+        $('.extracteurs').append('<img src="assets/img/Extracteur.png">')
     }
 }
 
