@@ -8,6 +8,7 @@ body {
   background-image: url('../img/background.png');
   background-size: cover;
   user-select: none;
+  cursor: url(../cursor/wow/NormalSelect.png), auto;
 }
 
 img{
@@ -20,48 +21,98 @@ main{
 
 }
 
+.curseur_pioche_bois {
+  cursor: url(../cursor/pioche_en_bois.png), auto;
+}
+
+/* mettre en png */
+.curseur_pioche_pierre {
+  cursor: url(../cursor/pioche_en_pierre.png), auto; 
+}
+
+.curseur_pioche_fer {
+  cursor: url(../cursor/pioche_en_fer.png), auto; 
+}
+
+.curseur_pioche_or {
+  cursor: url(../cursor/pioche_en_or.png), auto; 
+}
+
+.curseur_pioche_diamant {
+  cursor: url(../cursor/pioche_en_diamant.png), auto; 
+}
+
+.curseur_pioche_netherite {
+  cursor: url(../cursor/pioche_en_netherite.png), auto; 
+}
+.curseur_pioche_pixelite {
+  cursor: url(../cursor/pioche_en_pixelite.png), auto; 
+}
 /*-------------------BURTON----------------------*/
 
 /*-------------Compteur-----------*/
 .compteur{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: 25vh;
-  width: 10vw;
-  background-color: #e5683765;
-  backdrop-filter: blur(5px); /* Effet de flou pour le verre */
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(253, 254, 254, 0.233);
+  border-radius: 10px;
+  margin-bottom: 2vh;
+  border: solid 4px #8E302F;
+  min-height: 32vh;
+  margin-top: 1vh;
+  width: 15vw;
   position: absolute;
-  left: 1vw;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  left: 2vw;
+
 }
 
 .compteur img{
-  width: 60px;
+  width: 150px;
 }
 
 .compteur hr{
-  width: 80%;
+  border: none;
+  width: 70%;
+  background-color: black ;
+  height: 0.2vh;
+}
+
+.compteur h5{
+  background-color: #2b2424dd;
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 2vh !important;
 }
 
 .compteur h5, .compteur p{
-  margin: 0;
+  margin: 0; 
 }
 
 .compteur p{
+  color: aliceblue;
   display: flex;
   justify-content: center;
   font-size: 20px;
+  margin-bottom: 1vh;
+  padding: 5%;
+  border-radius: 150px;
+  text-shadow: 1px 1px 0px black;
+  font-size: 170%;
 }
 
 /*---------Chantier----------------------------*/
 
 .chantier{
-  min-height: 25vh;
-  width: 65vw;
+  min-height: 15vh;
+  width: 50vw;
   background-image: url('../img/background_chantier.jpg');
   position: absolute;
-  left: 13vw;
+  left: 23vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -117,6 +168,9 @@ main{
   cursor: pointer;
 }
 
+
+
+
 .disabled{
   background-color: #f0f0f0;
   pointer-events: none;
@@ -134,8 +188,22 @@ main{
 
 /*----------------------------younes-----------------------------*/
 
-.background{
+img{
+  -webkit-user-drag: none;
+}
 
+#options{
+  display: flex;
+  position: absolute;
+  z-index: 3 ;
+  width: 5vw;
+  bottom: 1vh;
+  left: 1vw;
+}
+
+#options img{
+  width: 80px;
+  margin-right: 2vw;
 }
 
 .chantier{
@@ -149,7 +217,9 @@ main{
   flex-direction: column;
 }
 
-.sous_titre_boutique{
+
+.sous_titre_boutique1,
+.sous_titre_boutique2{
   text-align: center;
   margin: 0;
   margin-top: 1.5vh;
@@ -157,8 +227,15 @@ main{
   color:aliceblue;
   border-radius: 10px;
   background-color: #2b2424dd;
-  padding: 2px;
+  padding: 4px;
   width: 70%;
+}
+
+
+
+.sous_titre_boutique1{
+  width: 60%;
+  margin-bottom: 0;
 }
 
 .image_mineur{
@@ -188,6 +265,10 @@ h2{
   justify-content: center;
   height: 13vh !important;
   margin-top: 2vh;
+}
+
+.carousel-item:hover{
+  cursor: url(../cursor/wow/NormalSelect.png), auto;
 }
 
 .carousel-item{
@@ -223,6 +304,10 @@ h2{
 
 .titre_pioche img{
   margin-left: 3%;
+}
+
+.pixelite_emoji{
+  width: 10% !important;
 }
 
 .ameliorations{
@@ -337,7 +422,7 @@ h2{
 }
 
 .prix_nom_achat:hover{
-  cursor: pointer;
+  cursor: url(../cursor/wow/loot.png),pointer;
   background-color: #d338009e;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -416,5 +501,10 @@ h2{
 .image_cadenas{
   width: 150px!important;
 }
+
+.image_cadenas:hover{
+  cursor: url(../cursor/wow/loot.png);
+}
+
 
 
