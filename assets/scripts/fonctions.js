@@ -280,6 +280,7 @@ function unlock_woodPickaxe(){
         changeCursor('curseur_pioche_bois');
         $('#cadenas_pioche_en_bois').attr('src', '../assets/img/image_cadenas_ouvert.png');
         $('#prix_pioche_en_bois').html('débloqué !');
+        $('#prix_pioche_en_bois').css('color', 'green')
         setTimeout(function() {$('#prix_pioche_en_bois').fadeOut('slow');}, 1200);
         setTimeout(function() {$('#cadenas_pioche_en_bois').fadeOut('slow');}, 800);
         $('#pioche_en_pierre').html('Pioche en pierre 🗿');
@@ -298,6 +299,7 @@ function unlock_stonePickaxe(){
             changeCursor('curseur_pioche_pierre');
             $('#cadenas_pioche_en_pierre').attr('src', '../assets/img/image_cadenas_ouvert.png');
             $('#prix_pioche_en_pierre').html('débloqué !');
+            $('#prix_pioche_en_pierre').css('color', 'green')
             setTimeout(function() {$('#prix_pioche_en_pierre').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_pierre').fadeOut('slow');}, 800); 
             $('#pioche_en_fer').html('Pioche en pierre 🪨');
@@ -316,6 +318,7 @@ function unlock_ironPickaxe(){
             changeCursor('curseur_pioche_fer');
             $('#cadenas_pioche_en_fer').attr('src', '../assets/img/image_cadenas_ouvert.png');
             $('#prix_pioche_en_fer').html('débloqué !');
+            $('#prix_pioche_en_fer').css('color', 'green')
             setTimeout(function() {$('#prix_pioche_en_fer').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_fer').fadeOut('slow');}, 800); 
             $('#pioche_en_fer').html('Pioche en fer 🪨');
@@ -335,9 +338,9 @@ function unlock_goldPickaxe(){
             changeCursor('curseur_pioche_or');
             $('#cadenas_pioche_en_or').attr('src', '../assets/img/image_cadenas_ouvert.png');
             $('#prix_pioche_en_or').html('débloqué !');
+            $('#prix_pioche_en_or').css('color', 'green')
             setTimeout(function() {$('#prix_pioche_en_or').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_or').fadeOut('slow');}, 800); 
-
             $('#pioche_en_or').html('Pioche en or 🪙');
             $('#image_pioche_en_diamant').attr('src', '../assets/img/pioche_en_diamant.webp');
             $('#prix_pioche_en_diamant').html("Prix : " + diamond_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
@@ -355,6 +358,7 @@ function unlock_diamondPickaxe(){
             changeCursor('curseur_pioche_diamant');
             $('#cadenas_pioche_en_diamant').attr('src', '../assets/img/image_cadenas_ouvert.png');
             $('#prix_pioche_en_diamant').html('débloqué !');
+            $('#prix_pioche_en_diamant').css('color', 'green')
             setTimeout(function() {$('#prix_pioche_en_diamant').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_diamant').fadeOut('slow');}, 800); 
             $('#pioche_en_diamant').html('Pioche en diamant 💎');
@@ -373,6 +377,7 @@ function unlock_netheritePickaxe(){
             changeCursor('curseur_pioche_netherite');
             $('#cadenas_pioche_en_netherite').attr('src', '../assets/img/image_cadenas_ouvert.png');
             $('#prix_pioche_en_netherite').html('débloqué !');
+            $('#prix_pioche_en_netherite').css('color', 'green')
             setTimeout(function() {$('#prix_pioche_en_netherite').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_netherite').fadeOut('slow');}, 800); 
             $('#pioche_en_netherite').html('Pioche en netherite ☄️');
@@ -391,6 +396,7 @@ function unlock_pixelite_Pickaxe(){
             changeCursor('curseur_pioche_pixelite');
             $('#cadenas_pioche_en_pixelite').attr('src', '../assets/img/image_cadenas_ouvert.png');
             $('#prix_pioche_en_pixelite').html('débloqué !');
+            $('#prix_pioche_en_pixelite').css('color', 'green')
             setTimeout(function() {$('#prix_pioche_en_pixelite').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_pixelite').fadeOut('slow');}, 800); 
             $('#pioche_en_pixelite').html('Pioche en pixelite ' + "<img src='assets/img/pixelite.png' alt='image pixelite' class='pixelite_emoji'/>");
