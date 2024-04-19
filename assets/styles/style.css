@@ -84,11 +84,9 @@ main{
   position: absolute;
   bottom: 9vh;
   left: 43vw;
+  cursor: pointer;
 }
 
-.mine img{
-  width: 250px;
-}
 
 .disabled{
   background-color: #f0f0f0;
@@ -103,6 +101,7 @@ main{
   top: 15vw;
   padding: 10px;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 /*----------------------------younes-----------------------------*/
