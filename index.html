@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="assets/img/pixelite.png" />
     <link rel="stylesheet" href="assets/styles/style.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
@@ -30,9 +31,25 @@
     ></script>
     <title>Document</title>
   </head>
-  <body>
+  <body id="body_cursor">
+    <audio autoplay loop>
+      <source src="assets/audio/bande_son_clicker.mp3" type="audio/mp3" />
+    </audio>
+
+    <audio id="clickSound">
+      <source src="assets/audio/bruit_clique.mp3" type="audio/mp3" />
+    </audio>
+
     <main>
       <div>
+        <div id="options">
+          <img src="assets/img/unmute.png" alt="image unmute" id="mute" />
+          <img
+            src="assets/img/fullscreen.png"
+            id="fullscreen-image"
+            alt="Image"
+          />
+        </div>
         <img
           src="assets/img/mineur.png"
           alt="image mineur"
@@ -43,8 +60,10 @@
           alt="image vaisseau"
           class="image_vaisseau"
         />
+
         <div class="compteur">
-          <img src="assets/img/pixelite.png" />
+          <img src="assets/img/pixelite.png" class="logo_pixelite" />
+
           <h5>Pixelites:</h5>
           <p class="count">0</p>
           <hr />
@@ -56,7 +75,7 @@
         <div class="boutique">
           <div class="background">
             <div class="ameliorations">
-              <h2 class="sous_titre_boutique">Ma pioche</h2>
+              <h2 class="sous_titre_boutique1">Ma pioche</h2>
               <div class="carousel">
                 <a class="carousel-item" href="#one!">
                   <img
@@ -66,10 +85,16 @@
                   />
                   <p class="pioche_en_bois">Pioche en bois 🪵</p>
                   <p class="prix_pioche" id="prix_pioche_en_bois">
-                    Prix: 5
                     <img src="assets/img/pixelite.png" alt="image pixelite" />
                   </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas" id="cadenas_pioche_en_bois"></div>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_bois"
+                    />
+                  </div>
                 </a>
                 <a class="carousel-item" href="#two!">
                   <img
@@ -79,80 +104,111 @@
                     id="image_pioche_en_pierre"
                   />
                   <p class="titre_pioche" id="pioche_en_pierre">???</p>
-                  <p class="prix_pioche" id="prix_pioche_en_pierre"> </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas" id="cadenas_pioche_en_pierre"></div>
+                  <p class="prix_pioche" id="prix_pioche_en_pierre"></p>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_pierre"
+                    />
+                  </div>
                 </a>
+
                 <a class="carousel-item" href="#three!">
                   <img
                     src="assets/img/pioche_non_debloquee.png"
                     alt="image pioche en fer"
                     class="image_pioche"
+                    id="image_pioche_en_fer"
                   />
-                  <p class="titre_pioche"></p>???</p>
-                  <p class="prix_pioche">
-                    
-                  </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas" id="cadenas_pioche_en_pierre"></div>
-
+                  <p class="titre_pioche" id="pioche_en_fer">???</p>
+                  <p class="prix_pioche" id="prix_pioche_en_fer"></p>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_fer"
+                    />
+                  </div>
                 </a>
                 <a class="carousel-item" href="#four!">
                   <img
                     src="assets/img/pioche_non_debloquee.png"
                     alt="image pioche en or"
                     class="image_pioche"
+                    id="image_pioche_en_or"
                   />
-                  <p class="titre_pioche">Pioche en or 🪙</p>
-                  <p class="prix_pioche">
-                    
-                  </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas"></div>
+                  <p class="titre_pioche" id="pioche_en_or">???</p>
+                  <p class="prix_pioche" id="prix_pioche_en_or"></p>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_or"
+                    />
+                  </div>
                 </a>
                 <a class="carousel-item" href="#five!">
                   <img
                     src="assets/img/pioche_non_debloquee.png"
                     alt="image pioche en diamant"
                     class="image_pioche"
+                    id="image_pioche_en_diamant"
                   />
-                  <p class="titre_pioche">Pioche en diamant 💎</p>
-                  <p class="prix_pioche">
-                   
-                  </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas"></div>
+                  <p class="titre_pioche" id="pioche_en_diamant">???</p>
+                  <p class="prix_pioche" id="prix_pioche_en_diamant"></p>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_diamant"
+                    />
+                  </div>
                 </a>
                 <a class="carousel-item" href="#six!">
                   <img
                     src="assets/img/pioche_non_debloquee.png"
                     alt="image pioche en netherite"
                     class="image_pioche"
+                    id="image_pioche_en_netherite"
                   />
-                  <p class="titre_pioche">Pioche en netherite ☄️</p>
-                  <p class="prix_pioche">
-                  </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas"></div>
+                  <p class="titre_pioche" id="pioche_en_netherite">???</p>
+                  <p class="prix_pioche" id="prix_pioche_en_netherite"></p>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_netherite"
+                    />
+                  </div>
                 </a>
                 <a class="carousel-item" href="#six!">
                   <img
                     src="assets/img/pioche_non_debloquee.png"
                     alt="image pioche en pixelite"
-                    class="image_pioche pioche_pixelite"
+                    class="image_pioche"
+                    id="image_pioche_en_pixelite"
                   />
-                  <p class="titre_pioche ">
-                    Pioche en pixelite<img
-                      src="assets/img/pixelite.png"
-                      alt="image pixelite"
-                      class="mini_image_pixelite"
+                  <p class="titre_pioche" id="pioche_en_pixelite">???</p>
+                  <p class="prix_pioche" id="prix_pioche_en_pixelite"></p>
+                  <div class="cadenas">
+                    <img
+                      src="assets/img/image_cadenas_ferme.png"
+                      alt="image cadenas"
+                      class="image_cadenas"
+                      id="cadenas_pioche_en_pixelite"
                     />
-                    <p class="prix_pioche">
-                       
-                      </p>
-                  </p>
-                  <div class="cadenas"><img src="assets/img/image_cadenas_ferme.png" alt="image cadenas" class="image_cadenas"></div>
+                  </div>
                 </a>
               </div>
-              
             </div>
             <section class="mineurs">
-              <h2 class="sous_titre_boutique">Mes Mineurs</h2>
+              <h2 class="sous_titre_boutique2">Mes Mineurs</h2>
               <div class="achat_image_chiffre" id="digibotButton" disabled>
                 <img
                   src="assets/img/Digibot_mystère.png"
@@ -217,7 +273,9 @@
           </div>
         </div>
       </div>
-      <div class="mine"><img src="assets/img/mine.png" alt="image mine" /></div>
+      <div id="mine" class="mine">
+        <img src="assets/img/mine.png" alt="image mine" Add id="rocher" />
+      </div>
     </main>
   </body>
 </html>
