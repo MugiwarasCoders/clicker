@@ -81,13 +81,7 @@ main{
   height: 0.2vh;
 }
 
-.compteur h5{
-  background-color: #2b2424dd;
-  color: aliceblue;
-  border-radius: 10px;
-  padding: 5px;
-  margin-bottom: 2vh !important;
-}
+
 
 .compteur h5, .compteur p{
   margin: 0; 
@@ -217,7 +211,7 @@ img{
   flex-direction: column;
 }
 
-
+.compteur h5,
 .sous_titre_boutique1,
 .sous_titre_boutique2{
   text-align: center;
@@ -227,7 +221,7 @@ img{
   color:aliceblue;
   border-radius: 10px;
   background-color: #2b2424dd;
-  padding: 4px;
+  padding: 7px;
   width: 70%;
 }
 
