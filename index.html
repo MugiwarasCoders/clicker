@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="assets/img/pixelite.png" />
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      defer
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="assets/scripts/script.js" defer></script>
     <script src="assets/scripts/fonctions.js" defer></script>
     <title>Pixel on Mars</title>
   </head>
-  
-  <body id="body_cursor">
-    
-</head>
-<body>
+  <body>
     <main>
       <div>
         <audio autoplay loop>
           <source src="assets/audio/bande_son_clicker.mp3" type="audio/mp3" />
         </audio>
-    
+
         <audio id="clickSound">
           <source src="assets/audio/bruit_clique.mp3" type="audio/mp3" />
         </audio>
         <div id="options">
-          <div id="mute muteSounds"><img src="assets/img/unmute.png" alt="image unmute" /></div>
+          <div id="mute muteSounds">
+            <img src="assets/img/unmute.png" alt="image unmute" />
+          </div>
           <img
             src="assets/img/fullscreen.png"
             id="fullscreen-image"
@@ -62,7 +74,7 @@
         <div class="boutique">
           <div class="background">
             <div class="ameliorations">
-              <h2 class="sous_titre_boutique1">Ma pioch</h2>
+              <h2 class="sous_titre_boutique1">Ma pioche</h2>
               <div class="carousel">
                 <a class="carousel-item" href="#one!">
                   <img
@@ -197,78 +209,123 @@
             <section class="mineurs">
               <h2 class="sous_titre_boutique2">Mes Mineurs</h2>
               <div class="achat_image_chiffre disabled" id="digibotButton">
-                  <img src="assets/img/Digibot_mystère.png" alt="image DigiBot" class="image_achat" id="digibotImg">
-                  <div class="prix_nom_achat">
-                      <div class="infos_mineur">
-                          <h3 class="nom_achat" id="digibotName">?????</h3>
-                          <p class="prix_mineurs" id="digibotPrice"></p>
-                      </div>
-                      <p class="chiffre_mineur" id="digibotNumber">0</p>
+                <img
+                  src="assets/img/Digibot_mystère.png"
+                  alt="image DigiBot"
+                  class="image_achat"
+                  id="digibotImg"
+                />
+                <div class="prix_nom_achat">
+                  <div class="infos_mineur">
+                    <h3 class="nom_achat" id="digibotName">?????</h3>
+                    <p class="prix_mineurs" id="digibotPrice"></p>
                   </div>
+                  <p class="chiffre_mineur" id="digibotNumber">0</p>
+                </div>
               </div>
-              <div class="achat_image_chiffre disabled" id="gigabotButton" disabled>
-                  <img src="assets/img/GigaBot_mystère.png" alt="image GigaBot" class="image_achat" id="gigabotImg">
-                  <div class="prix_nom_achat">
-                      <div class="infos_mineur">
-                          <h3 class="nom_achat" id="gigabotName">?????</h3>
-                          <p class="prix_mineurs" id="gigabotPrice"></p>
-                      </div>
-                      <p class="chiffre_mineur" id="gigabotNumber">0</p>
+              <div
+                class="achat_image_chiffre disabled"
+                id="gigabotButton"
+                disabled
+              >
+                <img
+                  src="assets/img/GigaBot_mystère.png"
+                  alt="image GigaBot"
+                  class="image_achat"
+                  id="gigabotImg"
+                />
+                <div class="prix_nom_achat">
+                  <div class="infos_mineur">
+                    <h3 class="nom_achat" id="gigabotName">?????</h3>
+                    <p class="prix_mineurs" id="gigabotPrice"></p>
                   </div>
+                  <p class="chiffre_mineur" id="gigabotNumber">0</p>
+                </div>
               </div>
-              <div class="achat_image_chiffre disabled" id="pixeliteuseButton" disabled>
-                  <img src="assets/img/Pixeliteuse_mystère.png" alt="image Pixeliteuse" class="image_achat" id="pixeliteuseImg">
-                  <div class="prix_nom_achat">
-                      <div class="infos_mineur">
-                          <h3 class="nom_achat" id="pixeliteuseName">?????</h3>
-                          <p class="prix_mineurs" id="pixeliteusePrice"></p>
-                      </div>
-                      <p class="chiffre_mineur" id="pixeliteuseNumber">0</p>
+              <div
+                class="achat_image_chiffre disabled"
+                id="pixeliteuseButton"
+                disabled
+              >
+                <img
+                  src="assets/img/Pixeliteuse_mystère.png"
+                  alt="image Pixeliteuse"
+                  class="image_achat"
+                  id="pixeliteuseImg"
+                />
+                <div class="prix_nom_achat">
+                  <div class="infos_mineur">
+                    <h3 class="nom_achat" id="pixeliteuseName">?????</h3>
+                    <p class="prix_mineurs" id="pixeliteusePrice"></p>
                   </div>
+                  <p class="chiffre_mineur" id="pixeliteuseNumber">0</p>
+                </div>
               </div>
-              <div class="achat_image_chiffre disabled" id="extracteurButton" disabled>
-                  <img src="assets/img/extracteur_mystère.png" alt="image extracteur" class="image_achat" id="extracteurImg">
-                  <div class="prix_nom_achat">
-                      <div class="infos_mineur">
-                          <h3 class="nom_achat" id="extracteurName">?????</h3>
-                          <p class="prix_mineurs" id="extracteurPrice"></p>
-                      </div>
-                      <p class="chiffre_mineur" id="extracteurNumber">0</p>
+              <div
+                class="achat_image_chiffre disabled"
+                id="extracteurButton"
+                disabled
+              >
+                <img
+                  src="assets/img/extracteur_mystère.png"
+                  alt="image extracteur"
+                  class="image_achat"
+                  id="extracteurImg"
+                />
+                <div class="prix_nom_achat">
+                  <div class="infos_mineur">
+                    <h3 class="nom_achat" id="extracteurName">?????</h3>
+                    <p class="prix_mineurs" id="extracteurPrice"></p>
                   </div>
+                  <p class="chiffre_mineur" id="extracteurNumber">0</p>
+                </div>
               </div>
-          </section>
+            </section>
           </div>
         </div>
       </div>
       <div id="mine" class="mine">
         <img src="assets/img/mine.png" alt="image mine" Add id="rocher" />
       </div>
-        <p class="notification"></p>
-        <div>
-            
-            <audio id="clicSound" src="assets/sounds/break_stone"></audio>
-            <audio id="buttonSound" src="assets/sounds/click_button"></audio>
-            <img src="assets/img/mineur.png" alt="image mineur" class="image_mineur">
-            <img src="assets/img/vaisseau.png" alt="image vaisseau" class="image_vaisseau">
-            <div class="compteur">
-                <img src="assets/img/pixelite.png">
-                <h5>Pixelites:</h5>
-                <p class="count">0</p>
-                <hr>
-                <h6>Pixelites/sec:</h6>
-                <p class="pps">0</p>
-                <div></div>
-            </div>
-            <div class="chantier">
-              <div class="minersChantier">
-                <div class="digibots"></div>
-                <div class="gigabots"></div>
-                <div class="pixeliteuses"></div>
-                <div class="extracteurs"></div>
-              </div>
-            </div>
+      <p class="notification"></p>
+      <div>
+        <audio id="clicSound" src="assets/sounds/break_stone"></audio>
+        <audio id="buttonSound" src="assets/sounds/click_button"></audio>
+        <img
+          src="assets/img/mineur.png"
+          alt="image mineur"
+          class="image_mineur"
+        />
+        <img
+          src="assets/img/vaisseau.png"
+          alt="image vaisseau"
+          class="image_vaisseau"
+        />
+        <div class="compteur">
+          <img src="assets/img/pixelite.png" />
+          <h5>Pixelites:</h5>
+          <p class="count">0</p>
+          <hr />
+          <h6>Pixelites/sec:</h6>
+          <p class="pps">0</p>
+          <div></div>
         </div>
-        <div class="mine"><img src="assets/img/mine.png" alt="image mine" id="stone"><img src="assets/img/mineurPixelite.png" alt="mineur de pixelite" class="mineurPixelite"></div>
+        <div class="chantier">
+          <div class="minersChantier">
+            <div class="digibots"></div>
+            <div class="gigabots"></div>
+            <div class="pixeliteuses"></div>
+            <div class="extracteurs"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mine">
+        <img src="assets/img/mine.png" alt="image mine" id="stone" /><img
+          src="assets/img/mineurPixelite.png"
+          alt="mineur de pixelite"
+          class="mineurPixelite"
+        />
+      </div>
     </main>
-</body>
+  </body>
 </html>
