@@ -143,7 +143,7 @@ function buy_DigiBot(){
         counter = counter - DigiBot_Price
         counterRefresh()
         //Le prix augmente et s'actualise
-        DigiBot_Price = DigiBot_Price * 2
+        DigiBot_Price = parseInt(DigiBot_Price * 1.25)
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 1
@@ -167,7 +167,7 @@ function buy_GigaBot(){
         counter = counter - GigaBot_Price
         counterRefresh()
         //Le prix augmente et s'actualise
-        GigaBot_Price = GigaBot_Price * 3
+        GigaBot_Price = parseInt(GigaBot_Price * 1.75)
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 10
@@ -191,7 +191,7 @@ function buy_Pixeliteuse(){
         counter = counter - Pixeliteuse_Price
         counterRefresh()
         //Le prix augmente et s'actualise
-        Pixeliteuse_Price = Pixeliteuse_Price * 4
+        Pixeliteuse_Price = parseInt(Pixeliteuse_Price * 3)
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 100
@@ -218,7 +218,7 @@ function buy_Extracteur(){
         Extracteur_Price = Extracteur_Price * 6
         pricesInit()
         //On augmente les pixelites/seconde
-        pixelitePerSecond += 300
+        pixelitePerSecond += 1000
         ppsRefresh()
     }
     else{
