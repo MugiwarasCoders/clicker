@@ -39,7 +39,6 @@ $(document).ready(function(){
     $('.prix_nom_achat').click(enableButton)
     setInterval(ppsRefresh, 1000); // Appelle ppsRefresh() toutes les secondes
     setInterval(counterRefresh, 100); // Appelle ppsRefresh() toutes les secondes
-    setInterval(ppsRefresh, 1000); // Appelle updatePixelitesPerSecond() toutes les secondes
 
     //--------------------Price wooden pickaxe-------------
     $('#prix_pioche_en_bois').html("Prix : " + wooden_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='pixelite_valeur'/>");
@@ -52,13 +51,13 @@ $(document).ready(function(){
     $('#cadenas_pioche_en_diamant').click(unlock_diamondPickaxe)
     $('#cadenas_pioche_en_netherite').click(unlock_netheritePickaxe)
     $('#cadenas_pioche_en_pixelite').click(unlock_pixelite_Pickaxe)
-
 })
 
 
 //------------------Animations-----------------------
 let i = 0
 $('.mine').click(function(){
+    playSoundTrack()
     //On initialise le mouvement du mineur au premier clic
     if (counter === 0){
         $('.image_mineur').attr('src', 'assets/img/mineur_bois.gif')

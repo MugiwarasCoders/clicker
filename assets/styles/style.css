@@ -119,6 +119,15 @@ main{
   margin: auto;
 }
 
+.mine{
+  display: flex;
+  align-items: flex-end;
+}
+
+.mineurPixelite{
+  height: 100px;
+}
+
 /**/
 
 .boutique{
@@ -441,10 +450,6 @@ h2{
   left: 25vw;
   z-index: 100;
   font-size: 25px;
-}
-
-.mineurPixelite{
-  width: 100px !important;
 }
 
 .popPixelite{

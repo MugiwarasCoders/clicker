@@ -30,6 +30,11 @@ $("#fullscreen-image").click(function() {
 });
 
 //----------------Sounds----------------
+function playSoundTrack(){
+    let soundtrack = $('#soundtrack')[0];
+    soundtrack.play()
+}
+
 function playClicSound(){
     let clicSound = $('#clicSound')[0];
     clicSound.currentTime = 0; // Réinitialise le son à partir du début
@@ -89,9 +94,9 @@ function counterRefresh(){
 }
 
 function ppsRefresh(){
+    counter += pixelitePerSecond
     $('.pps').html(pixelitePerSecond)
     localStorage.setItem('pixelitePerSecond', pixelitePerSecond)
-    counter += pixelitePerSecond
     counterRefresh()
 }
 
@@ -270,12 +275,13 @@ function changeCursor(class_name) {
     $('#mine').addClass(class_name);
 }
 
+//----------Unlock Pickaxes--------------------------------------------------------------
+
 //---------------WoodPickAxe------------------------
 function unlock_woodPickaxe(){
     if (counter >= wooden_pickAxe_Price){
         // $('.image_mineur').attr('src', 'assets/img/mineur_bois.gif')
         counter = counter - wooden_pickAxe_Price;
-        pixelitePerSecond += 100
         ppsRefresh();
         changeCursor('curseur_pioche_bois');
         $('#cadenas_pioche_en_bois').attr('src', '../assets/img/image_cadenas_ouvert.png');
@@ -305,6 +311,7 @@ function unlock_stonePickaxe(){
             $('#pioche_en_fer').html('Pioche en pierre 🪨');
             $('#image_pioche_en_fer').attr('src', '../assets/img/pioche_en_fer.webp');
             $('#prix_pioche_en_fer').html("Prix : " + iron_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+            $('.image_mineur').attr('src', 'assets/img/mineur_pierre.gif')
         }
     }
 
@@ -324,6 +331,7 @@ function unlock_ironPickaxe(){
             $('#pioche_en_fer').html('Pioche en fer 🪨');
             $('#image_pioche_en_or').attr('src', '../assets/img/pioche_en_or.webp');
             $('#prix_pioche_en_or').html("Prix : " + gold_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+            $('.image_mineur').attr('src', 'assets/img/mineur_fer.gif')
         }
     }
 
@@ -344,6 +352,7 @@ function unlock_goldPickaxe(){
             $('#pioche_en_or').html('Pioche en or 🪙');
             $('#image_pioche_en_diamant').attr('src', '../assets/img/pioche_en_diamant.webp');
             $('#prix_pioche_en_diamant').html("Prix : " + diamond_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+            $('.image_mineur').attr('src', 'assets/img/mineur_or.gif')
         }
     }
     
@@ -386,7 +395,7 @@ function unlock_netheritePickaxe(){
         }
     }
         
-//---------------PxelitePickAxe------------------------
+//---------------PixelitePickAxe------------------------
 function unlock_pixelite_Pickaxe(){
     // Vérifie si la pioche en bois est débloquée
         // Si la pioche en bois est débloquée et que le compteur est suffisant pour la pioche en pierre
