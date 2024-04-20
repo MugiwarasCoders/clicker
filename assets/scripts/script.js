@@ -59,16 +59,17 @@ let i = 0
 $('.mine').click(function(){
     playSoundTrack()
     //On initialise le mouvement du mineur au premier clic
-    if (counter === 0){
+    let imageSrc = $('.image_mineur').attr('src')
+    if (imageSrc === 'assets/img/mineur.png'){
         $('.image_mineur').attr('src', 'assets/img/mineur_bois.gif')
     }
     i++
     //Le mineur de pixelite mine à chaque clic
     if (i%2 === 0){
-        $('.mineurPixelite').attr('src', 'assets/img/mineurPixelite2.png')
+        $('.mineurPixelite').attr('src', 'assets/img/mineurPixelite.png')
     }
     else{
-        $('.mineurPixelite').attr('src', 'assets/img/mineurPixelite.png')
+        $('.mineurPixelite').attr('src', 'assets/img/mineurPixelite2.png')
     }
     //On fait apparaître des pixelites dans des directions random à chaque clic
     popPixelite(event)

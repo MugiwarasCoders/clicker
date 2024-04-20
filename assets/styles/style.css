@@ -452,10 +452,20 @@ h2{
   font-size: 25px;
 }
 
+.divPopPixelite{
+  position: absolute;
+  display: none;
+  animation-duration: 2s !important;
+}
+
 .popPixelite{
   width: 50px !important;
-  display: none;
-  position: absolute;
+  height: 50px;
+}
+
+.divPopPixelite p{
+  color: white;
+  font-size: 20px;
 }
 
 .cadenas{

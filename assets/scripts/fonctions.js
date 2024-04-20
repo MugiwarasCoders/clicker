@@ -234,13 +234,17 @@ function buy_Extracteur(){
 function popPixelite(event){
     let Animates = ["animate__fadeOutTopLeft", "animate__fadeOutTopRight", "animate__fadeOutBottomLeft", "animate__fadeOutBottomRight"]
     let randomAnimate = Animates[Math.floor(Math.random() * Animates.length)]
-    $('.mine').append('<img src="assets/img/pixelite.png" class="popPixelite animate__animated '+randomAnimate+' ">')
+    $('.mine').append('<div class="divPopPixelite animate__animated '+randomAnimate+' "><img class="popPixelite" src="assets/img/pixelite.png"><p>+'+clickerGain+'</p></div>')
     let posX = event.pageX - $(event.currentTarget).offset().left;
     let posY = event.pageY - $(event.currentTarget).offset().top; 
-    $('.popPixelite').css({
+    $('.divPopPixelite').css({
         left: posX,
-        top: posY
-    }).fadeIn()
+        top: posY,
+        display: "flex"
+    })
+    if (counter % 50 === 0 ){
+        $('.divPopPixelite').remove()
+    }
 }
 
 function shakeStone(){
@@ -264,11 +268,9 @@ function enableButton(){
         }
         else{
             $(this).parent('.achat_image_chiffre').addClass('disabled')
-            $()
         }
     })
 }
-
 
 //------------Buy PickAxes----------------------
 function changeCursor(class_name) {
@@ -280,7 +282,6 @@ function changeCursor(class_name) {
 //---------------WoodPickAxe------------------------
 function unlock_woodPickaxe(){
     if (counter >= wooden_pickAxe_Price){
-        // $('.image_mineur').attr('src', 'assets/img/mineur_bois.gif')
         counter = counter - wooden_pickAxe_Price;
         ppsRefresh();
         changeCursor('curseur_pioche_bois');
@@ -312,6 +313,7 @@ function unlock_stonePickaxe(){
             $('#image_pioche_en_fer').attr('src', '../assets/img/pioche_en_fer.webp');
             $('#prix_pioche_en_fer').html("Prix : " + iron_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_pierre.gif')
+            clickerGain = 2
         }
     }
 
@@ -332,6 +334,7 @@ function unlock_ironPickaxe(){
             $('#image_pioche_en_or').attr('src', '../assets/img/pioche_en_or.webp');
             $('#prix_pioche_en_or').html("Prix : " + gold_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_fer.gif')
+            clickerGain = 10
         }
     }
 
@@ -353,6 +356,7 @@ function unlock_goldPickaxe(){
             $('#image_pioche_en_diamant').attr('src', '../assets/img/pioche_en_diamant.webp');
             $('#prix_pioche_en_diamant').html("Prix : " + diamond_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_or.gif')
+            clickerGain = 20
         }
     }
     
@@ -373,10 +377,12 @@ function unlock_diamondPickaxe(){
             $('#pioche_en_diamant').html('Pioche en diamant 💎');
             $('#image_pioche_en_netherite').attr('src', '../assets/img/pioche_en_netherite.webp');
             $('#prix_pioche_en_netherite').html("Prix : " + netherite_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+            $('.image_mineur').attr('src', 'assets/img/mineur_diamant.gif')
+            clickerGain = 50
         }
     }
 
-//---------------DnetheritePickAxe------------------------
+//---------------NetheritePickAxe------------------------
 function unlock_netheritePickaxe(){
     // Vérifie si la pioche en bois est débloquée
         // Si la pioche en bois est débloquée et que le compteur est suffisant pour la pioche en pierre
@@ -392,6 +398,8 @@ function unlock_netheritePickaxe(){
             $('#pioche_en_netherite').html('Pioche en netherite ☄️');
             $('#image_pioche_en_pixelite').attr('src', '../assets/img/pioche_en_pixelite.webp');
             $('#prix_pioche_en_pixelite').html("Prix : " + pixelite_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
+            $('.image_mineur').attr('src', 'assets/img/mineur_netherite.gif')
+            clickerGain = 100
         }
     }
         
@@ -409,7 +417,8 @@ function unlock_pixelite_Pickaxe(){
             setTimeout(function() {$('#prix_pioche_en_pixelite').fadeOut('slow');}, 1200); 
             setTimeout(function() {$('#cadenas_pioche_en_pixelite').fadeOut('slow');}, 800); 
             $('#pioche_en_pixelite').html('Pioche en pixelite ' + "<img src='assets/img/pixelite.png' alt='image pixelite' class='pixelite_emoji'/>");
-
+            $('.image_mineur').attr('src', 'assets/img/mineur_pixelite.gif')
+            clickerGain = 200
         }
     }
 
