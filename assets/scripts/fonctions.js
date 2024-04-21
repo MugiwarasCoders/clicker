@@ -146,8 +146,7 @@ function buy_DigiBot(){
         DigiBot_Price = parseInt(DigiBot_Price * 1.25)
         pricesInit()
         //On augmente les pixelites/seconde
-        pixelitePerSecond += 1
-        digibotProductivity +=1
+        pixelitePerSecond += digibotProductivity
         localStorage.setItem('digibotProductivity', digibotProductivity)
         ppsRefresh()
     }
@@ -172,8 +171,7 @@ function buy_GigaBot(){
         GigaBot_Price = parseInt(GigaBot_Price * 1.75)
         pricesInit()
         //On augmente les pixelites/seconde
-        pixelitePerSecond += 10
-        gigabotProductivity +=10
+        pixelitePerSecond += gigabotProductivity
         localStorage.setItem('gigabotProductivity', gigabotProductivity)
         ppsRefresh()
     }
@@ -198,8 +196,7 @@ function buy_Pixeliteuse(){
         Pixeliteuse_Price = parseInt(Pixeliteuse_Price * 3)
         pricesInit()
         //On augmente les pixelites/seconde
-        pixelitePerSecond += 100
-        pixeliteuseProductivity += 100
+        pixelitePerSecond += pixeliteuseProductivity
         localStorage.setItem('pixeliteuseProductivity', pixeliteuseProductivity)
         ppsRefresh()
     }
@@ -224,8 +221,7 @@ function buy_Extracteur(){
         Extracteur_Price = Extracteur_Price * 6
         pricesInit()
         //On augmente les pixelites/seconde
-        pixelitePerSecond += 1000
-        extracteurProductivity += 1000
+        pixelitePerSecond += extracteurProductivity
         localStorage.setItem('extracteurProductivity', extracteurProductivity)
         ppsRefresh()
     }
@@ -241,15 +237,19 @@ function buy_Extracteur(){
 
 function floatingInfos(){
     let float = $(this).find('.floatingInfos')
+    let nombre = $(this).find('.chiffre_mineur').text()
     let name = $(this).find('.nom_achat').text()
     let description = float.find('.description')
+    let oneProduct = float.find('.oneProduct')
+    let allProduct = float.find('.allProduct')
     let nameProductivity = name.toLowerCase()+'Productivity'
     let productivity = localStorage.getItem(nameProductivity)
     if (productivity === null){
         productivity = 0
     }
     float.find('h5').html(name)
-    description.html('Mine '+productivity+' pixelites chaque seconde')
+    oneProduct.html(1 +' ' +name +' mine '+productivity+' pixelite(s) chaque seconde')
+    allProduct.html(nombre +' '+name+' minent '+(productivity*nombre)+' pixelite(s) chaque seconde')
 }
 
 //------------Animation Functions----------------------

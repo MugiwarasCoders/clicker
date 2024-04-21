@@ -169,15 +169,24 @@ main{
   height: 150px;
   width: 300px;
   display: none;
+  font-size: 10px;
   background-color: grey;
   position: absolute;
   right: 19vw;
-  border: 2px solid black;
+  border: 4px solid black;
   border-radius: 10px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.floatingInfos h5{
+  margin: 0;
 }
 
 .achat_image_chiffre:hover .floatingInfos{
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*----------------------------younes-----------------------------*/

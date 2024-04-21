@@ -20,10 +20,10 @@ let diamond_pickAxe_Price = 30
 let netherite_pickAxe_Price = 40
 let pixelite_pickAxe_Price = 50
 
-let digibotProductivity = 0
-let gigabotProductivity = 0
-let pixeliteuseProductivity = 0
-let extracteurProductivity = 0
+let digibotProductivity = 1
+let gigabotProductivity = 10
+let pixeliteuseProductivity = 100
+let extracteurProductivity = 1000
 
 
 
