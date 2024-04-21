@@ -1,5 +1,6 @@
 const notEnoughMoney = 'Vous n\'avez pas suffisamment de pixelites pour cela!'
 const gameEnded = 'Vous avez fini le jeu'
+const congratulations = ['Quel talent!', 'Mais arrêtez cette personne!', 'Wow, quelle vitesse!!', 'Impressionant!', 'Du jamais vu!']
 
 function clickAddPixelite(){
     counter += clickerGain
@@ -150,11 +151,15 @@ function buy_DigiBot(){
         localStorage.setItem('digibotProductivity', digibotProductivity)
         ppsRefresh()
     }
-    else{
-        notification(notEnoughMoney)
-    }
     if ($('#digibotNumber').text() % 5 == 0){
+        pixelitePerSecond = pixelitePerSecond - (digibotProductivity*(number+1))
+        digibotProductivity = digibotProductivity*2
+        localStorage.setItem('digibotProductivity', digibotProductivity)
+        pixelitePerSecond = pixelitePerSecond + (digibotProductivity*(number+1))
         $('.digibots').append('<img src="assets/img/Digibot.png">')
+        let i = Math.floor(Math.random() * congratulations.length)
+        notification(congratulations[i])
+        setTimeout(function(){notification('Vos DigiBots rapportent 2x plus de Pixelite à présent')}, 2500)
     }
 }
 
@@ -175,11 +180,15 @@ function buy_GigaBot(){
         localStorage.setItem('gigabotProductivity', gigabotProductivity)
         ppsRefresh()
     }
-    else{
-        notification(notEnoughMoney)
-    }
     if ($('#gigabotNumber').text() % 5 == 0){
+        pixelitePerSecond = pixelitePerSecond - (gigabotProductivity*(number+1))
+        gigabotProductivity = gigabotProductivity*2
+        localStorage.setItem('gigabotProductivity', gigabotProductivity)
+        pixelitePerSecond = pixelitePerSecond + (gigabotProductivity*(number+1))
         $('.gigabots').append('<img src="assets/img/Gigabot.png">')
+        let i = Math.floor(Math.random() * congratulations.length)
+        notification(congratulations[i])
+        setTimeout(function(){notification('Vos GigaBots rapportent 2x plus de Pixelite à présent')}, 2500)
     }
 }
 
@@ -200,11 +209,15 @@ function buy_Pixeliteuse(){
         localStorage.setItem('pixeliteuseProductivity', pixeliteuseProductivity)
         ppsRefresh()
     }
-    else{
-        notification(notEnoughMoney)
-    }
     if ($('#pixeliteuseNumber').text() % 5 == 0){
+        pixelitePerSecond = pixelitePerSecond - (pixeliteuseProductivity*(number+1))
+        pixeliteuseProductivity = pixeliteuseProductivity*2
+        localStorage.setItem('pixeliteuseProductivity', pixeliteuseProductivity)
+        pixelitePerSecond = pixelitePerSecond + (pixeliteuseProductivity*(number+1))
         $('.pixeliteuses').append('<img src="assets/img/Pixeliteuse.png">')
+        let i = Math.floor(Math.random() * congratulations.length)
+        notification(congratulations[i])
+        setTimeout(function(){notification('Vos Pixeliteuses rapportent 2x plus de Pixelite à présent')}, 2500)
     }
 }
 
@@ -225,11 +238,15 @@ function buy_Extracteur(){
         localStorage.setItem('extracteurProductivity', extracteurProductivity)
         ppsRefresh()
     }
-    else{
-        notification(notEnoughMoney)
-    }
     if ($('#extracteurNumber').text() % 5 == 0){
+        pixelitePerSecond = pixelitePerSecond - (extracteurProductivity*(number+1))
+        extracteurProductivity = extracteurProductivity*2
+        localStorage.setItem('extracteurProductivity', extracteurProductivity)
+        pixelitePerSecond = pixelitePerSecond + (extracteurProductivity*(number+1))
         $('.extracteurs').append('<img src="assets/img/Extracteur.png">')
+        let i = Math.floor(Math.random() * congratulations.length)
+        notification(congratulations[i])
+        setTimeout(function(){notification('Vos Extracteurs rapportent 2x plus de Pixelite à présent')}, 2300)
     }
 }
 
@@ -277,7 +294,7 @@ function shakeStone(){
 
 //------------Interface----------------------
 function notification(texte){
-    $('.notification').text(texte).fadeIn();
+    $('.notification').html(texte).fadeIn();
     setTimeout(function(){$('.notification').text(texte).fadeOut()}, 2000);
 }
 

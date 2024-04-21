@@ -11,14 +11,13 @@ let Extracteur_Price = 2000;
 
 //Prix
 //Pioches
-let pioche_en_bois_Price = 5
-let wooden_pickAxe_Price = 5
-let stone_pickAxe_Price = 10
-let iron_pickAxe_Price = 15
-let gold_pickAxe_Price = 20
-let diamond_pickAxe_Price = 30
-let netherite_pickAxe_Price = 40
-let pixelite_pickAxe_Price = 50
+let wooden_pickAxe_Price = 0
+let stone_pickAxe_Price = 200
+let iron_pickAxe_Price = 1000
+let gold_pickAxe_Price = 50000
+let diamond_pickAxe_Price = 200000
+let netherite_pickAxe_Price = 500000
+let pixelite_pickAxe_Price = 1000000
 
 let digibotProductivity = 1
 let gigabotProductivity = 10
@@ -49,7 +48,7 @@ $(document).ready(function(){
     $('#prix_pioche_en_bois').html("Prix : " + wooden_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='pixelite_valeur'/>");
 
     //------------------Buy PickAxes-----------------------
-    $('#cadenas_pioche_en_bois').click(unlock_woodPickaxe)
+    unlock_woodPickaxe()
     $('#cadenas_pioche_en_pierre').click(unlock_stonePickaxe)
     $('#cadenas_pioche_en_fer').click(unlock_ironPickaxe)
     $('#cadenas_pioche_en_or').click(unlock_goldPickaxe)

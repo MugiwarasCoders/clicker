@@ -166,11 +166,11 @@ main{
 }
 
 .floatingInfos{
-  height: 150px;
-  width: 300px;
+  width: 350px;
   display: none;
-  font-size: 10px;
-  background-color: grey;
+  color: white;
+  font-size: 15px;
+  background-color: #1F1F1F;
   position: absolute;
   right: 19vw;
   border: 4px solid black;
@@ -187,6 +187,10 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.achat_image_chiffre hr{
+  width: 100%;
 }
 
 /*----------------------------younes-----------------------------*/
@@ -468,10 +472,8 @@ h2{
 
 .notification{
   position: absolute;
-  background-color: black;
-  color: rgb(88, 4, 4);
-  top: 8vh;
-  left: 25vw;
+  z-index: 999;
+  color: rgb(100, 236, 15);
   z-index: 100;
   font-size: 25px;
 }
