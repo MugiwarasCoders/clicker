@@ -20,6 +20,11 @@ let diamond_pickAxe_Price = 30
 let netherite_pickAxe_Price = 40
 let pixelite_pickAxe_Price = 50
 
+let digibotProductivity = 0
+let gigabotProductivity = 0
+let pixeliteuseProductivity = 0
+let extracteurProductivity = 0
+
 
 
 
@@ -51,6 +56,7 @@ $(document).ready(function(){
     $('#cadenas_pioche_en_diamant').click(unlock_diamondPickaxe)
     $('#cadenas_pioche_en_netherite').click(unlock_netheritePickaxe)
     $('#cadenas_pioche_en_pixelite').click(unlock_pixelite_Pickaxe)
+    $('.achat_image_chiffre').mouseenter(floatingInfos) 
 })
 
 

@@ -147,6 +147,8 @@ function buy_DigiBot(){
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 1
+        digibotProductivity +=1
+        localStorage.setItem('digibotProductivity', digibotProductivity)
         ppsRefresh()
     }
     else{
@@ -171,6 +173,8 @@ function buy_GigaBot(){
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 10
+        gigabotProductivity +=10
+        localStorage.setItem('gigabotProductivity', gigabotProductivity)
         ppsRefresh()
     }
     else{
@@ -195,6 +199,8 @@ function buy_Pixeliteuse(){
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 100
+        pixeliteuseProductivity += 100
+        localStorage.setItem('pixeliteuseProductivity', pixeliteuseProductivity)
         ppsRefresh()
     }
     else{
@@ -219,6 +225,8 @@ function buy_Extracteur(){
         pricesInit()
         //On augmente les pixelites/seconde
         pixelitePerSecond += 1000
+        extracteurProductivity += 1000
+        localStorage.setItem('extracteurProductivity', extracteurProductivity)
         ppsRefresh()
     }
     else{
@@ -227,6 +235,21 @@ function buy_Extracteur(){
     if ($('#extracteurNumber').text() % 5 == 0){
         $('.extracteurs').append('<img src="assets/img/Extracteur.png">')
     }
+}
+
+//------------Miners Infos----------------------
+
+function floatingInfos(){
+    let float = $(this).find('.floatingInfos')
+    let name = $(this).find('.nom_achat').text()
+    let description = float.find('.description')
+    let nameProductivity = name.toLowerCase()+'Productivity'
+    let productivity = localStorage.getItem(nameProductivity)
+    if (productivity === null){
+        productivity = 0
+    }
+    float.find('h5').html(name)
+    description.html('Mine '+productivity+' pixelites chaque seconde')
 }
 
 //------------Animation Functions----------------------
