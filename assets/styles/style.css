@@ -216,6 +216,13 @@ img{
   left: 1vw;
 }
 
+#options img:hover{
+  border-radius: 150px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(253, 254, 254, 0.233);
+}
+
 #options img{
   width: 80px;
   margin-right: 2vw;

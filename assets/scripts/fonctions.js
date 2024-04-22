@@ -396,7 +396,7 @@ function unlock_goldPickaxe(){
             $('#image_pioche_en_diamant').attr('src', '../assets/img/pioche_en_diamant.webp');
             $('#prix_pioche_en_diamant').html("Prix : " + diamond_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_or.gif')
-            clickerGain = 20
+            clickerGain = 100
         }
     }
     
@@ -418,7 +418,7 @@ function unlock_diamondPickaxe(){
             $('#image_pioche_en_netherite').attr('src', '../assets/img/pioche_en_netherite.webp');
             $('#prix_pioche_en_netherite').html("Prix : " + netherite_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_diamant.gif')
-            clickerGain = 50
+            clickerGain = 2000
         }
     }
 
@@ -439,7 +439,7 @@ function unlock_netheritePickaxe(){
             $('#image_pioche_en_pixelite').attr('src', '../assets/img/pioche_en_pixelite.webp');
             $('#prix_pioche_en_pixelite').html("Prix : " + pixelite_pickAxe_Price + "<img src='assets/img/pixelite.png' alt='image pixelite' class='prix_pioche'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_netherite.gif')
-            clickerGain = 100
+            clickerGain = 5000
         }
     }
         
@@ -458,7 +458,7 @@ function unlock_pixelite_Pickaxe(){
             setTimeout(function() {$('#cadenas_pioche_en_pixelite').fadeOut('slow');}, 800); 
             $('#pioche_en_pixelite').html('Pioche en pixelite ' + "<img src='assets/img/pixelite.png' alt='image pixelite' class='pixelite_emoji'/>");
             $('.image_mineur').attr('src', 'assets/img/mineur_pixelite.gif')
-            clickerGain = 200
+            clickerGain = 10000
         }
     }
 
