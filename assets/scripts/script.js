@@ -26,6 +26,7 @@ let pixelite_pickAxe_Price = 50
 $(document).ready(function(){
     $('.carousel').carousel();//Animation carousel
     pricesInit()
+    $('.image_vaisseau').click(Ship)
     $('.mine').click(clickAddPixelite)
     $('.achat_image_chiffre').click(playButtonSound)
     $('#muteSounds').click(playButtonSound)

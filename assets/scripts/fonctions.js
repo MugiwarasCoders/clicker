@@ -47,10 +47,10 @@ function muteSounds(){
     for (let i = 0; i < sons.length; i++){
         sons[i].muted = !sons[i].muted;
         if (sons[i].muted){
-            $('#muteSounds').html("<img src='assets/img/mute.png'")
+            $('#muteSounds').attr("src", "assets/img/mute.png")
         }
         else{
-            $('#muteSounds').html("<img src='assets/img/unmute.png'")
+            $('#muteSounds').attr("src", "assets/img/unmute.png")
         }
     }
 }
@@ -241,6 +241,11 @@ function popPixelite(event){
 function shakeStone(){
     $('.mine').addClass('animate__animated animate__bounceOut').fadeIn()
     setTimeout(function(){$('.mine').removeClass('animate__animated animate__bounceOut')}, 100)
+}
+
+function Ship(){
+    $('.image_vaisseau').addClass('animate__animated animate__backInDown').fadeIn()
+    setTimeout(function(){$('.image_vaisseau').removeClass('animate__animated animate__backInDown')}, 100)
 }
 
 //------------Interface----------------------
