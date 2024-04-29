@@ -1,0 +1,23 @@
+.favContainer{
+    border: 1px solid white;
+    color: white;
+    margin: 10px 0;
+    background-color: #141313;
+}
+
+.favImage{
+    height: 250px;
+    margin: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.rmAllFavs{
+    background-color: #141313;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 20px;
+    position: absolute;
+}
